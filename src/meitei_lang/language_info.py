@@ -163,3 +163,31 @@ def get_supported_scripts() -> Dict[str, Any]:
             )
         }
     }
+
+
+def get_script_summary() -> Dict[str, Any]:
+    """
+    Return a summary of supported scripts (alias for get_supported_scripts).
+    """
+    return get_supported_scripts()
+
+
+def get_alphabet(include_extended: bool = False) -> List[Dict[str, Any]]:
+    """
+    Return the Meitei Mayek letter inventory.
+
+    Args:
+        include_extended: If True, includes the 9 Cheising Iyek (extended letters).
+                          If False, returns only the primary 18 Iyek Ipi.
+
+    Returns:
+        List of dictionaries with letter character, name, meaning, sound, bengali, and roman mappings.
+    """
+    letters: List[Dict[str, Any]] = []
+    for char, info in IYEK_IPI.items():
+        letters.append({"char": char, **info})
+    if include_extended:
+        for char, info in CHEISING_IYEK.items():
+            letters.append({"char": char, **info})
+    return letters
+

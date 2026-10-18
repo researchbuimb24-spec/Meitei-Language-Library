@@ -1,0 +1,58 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "meitei-lang"
+version = "0.1.0"
+description = "Comprehensive Python library for the Meitei (Manipuri) language, supporting Meitei Mayek script, transliteration, 3,000+ vocabulary entries, reading texts, and songs."
+readme = "README.md"
+authors = [
+    { name = "Meitei Language Project Maintainers" }
+]
+license = { text = "MIT" }
+requires-python = ">=3.9"
+keywords = [
+    "meitei",
+    "manipuri",
+    "meitei-mayek",
+    "nlp",
+    "transliteration",
+    "tibeto-burman",
+    "northeast-india",
+    "linguistics",
+    "language-data"
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "Topic :: Text Processing :: Linguistic",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Operating System :: OS Independent",
+    "Typing :: Typed",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "build>=1.0.0",
+    "twine>=4.0.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+meitei_lang = ["data/*", "py.typed"]
+
+[tool.pyright]
+include = ["src", "scripts", "tests"]
+extraPaths = ["src", "scripts"]

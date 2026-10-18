@@ -4,11 +4,13 @@ Generates the comprehensive Meitei vocabulary dataset.
 Target: At least 3,000 unique, meaningful, authentic Meitei entries.
 """
 
+import io
 import sys
 import os
 
 # Ensure UTF-8
-sys.stdout.reconfigure(encoding='utf-8')
+if isinstance(sys.stdout, io.TextIOWrapper):
+    sys.stdout.reconfigure(encoding='utf-8')
 
 # We'll build raw entries and deduplicate them by 'word'.
 # Schema:

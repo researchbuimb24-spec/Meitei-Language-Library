@@ -43,6 +43,8 @@ def normalize_text(text: str) -> str:
     normalized = unicodedata.normalize("NFC", text)
     # Strip unnecessary control characters except tab and newline
     cleaned = "".join(c for c in normalized if c == "\n" or c == "\t" or not unicodedata.category(c).startswith("C"))
+    # Collapse multiple horizontal whitespace into a single space
+    cleaned = re.sub(r"[ \t]+", " ", cleaned)
     return cleaned.strip()
 
 
@@ -81,13 +83,18 @@ def detect_script(text: str) -> str:
     return "mixed"
 
 
-def validate_text(text: str, allowed_script: Optional[str] = None) -> bool:
+def validate_text(
+    text: str,
+    allowed_script: Optional[str] = None,
+    expected_script: Optional[str] = None,
+) -> bool:
     """
     Validate that text contains valid characters and matches the expected script if specified.
 
     Args:
         text: Input string to validate.
         allowed_script: Optional script name ('meitei_mayek', 'bengali', 'latin').
+        expected_script: Alias for allowed_script.
 
     Returns:
         True if text is valid.
@@ -95,6 +102,9 @@ def validate_text(text: str, allowed_script: Optional[str] = None) -> bool:
     Raises:
         ValidationError: If text is empty or contains characters outside the specified script.
     """
+    if expected_script is not None and allowed_script is None:
+        allowed_script = expected_script
+
     if not isinstance(text, str):
         raise TypeError(f"Expected str, got {type(text).__name__}")
     if not text.strip():

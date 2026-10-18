@@ -4,11 +4,13 @@ Meitei (Manipuri) Comprehensive Lexicon Generator.
 Generates >= 3,000 authentic, meaningful lexical entries.
 """
 
+import io
 import sys
 import os
 import json
 
-sys.stdout.reconfigure(encoding='utf-8')
+if isinstance(sys.stdout, io.TextIOWrapper):
+    sys.stdout.reconfigure(encoding='utf-8')
 
 # Ensure we can import transliteration from src
 ROOT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
