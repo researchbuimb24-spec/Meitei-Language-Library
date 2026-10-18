@@ -78,6 +78,18 @@ class Song:
         """Convert song object to standard Python dictionary."""
         return asdict(self)
 
+    def __getitem__(self, key: str) -> Any:
+        try:
+            return getattr(self, key)
+        except AttributeError:
+            raise KeyError(key)
+
+    def get(self, key: str, default: Any = None) -> Any:
+        return getattr(self, key, default)
+
+    def __contains__(self, key: str) -> bool:
+        return hasattr(self, key)
+
     def __str__(self) -> str:
         return f"Song '{self.title}' ({self.title_en}) [{self.genre}]"
 

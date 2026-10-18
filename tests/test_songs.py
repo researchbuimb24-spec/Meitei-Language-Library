@@ -78,3 +78,13 @@ def test_search_songs():
     matches = search_songs("Yaoshang")
     assert len(matches) > 0
     assert any(s.song_id == "thabal_chongba_ishei" for s in matches)
+
+
+def test_song_dict_access():
+    song = get_song("sana_leibak_manipur")
+    assert song["song_id"] == "sana_leibak_manipur"
+    assert "composer" in song
+    assert song.get("lyricist") == song.lyricist
+    assert song.get("nonexistent", "fallback") == "fallback"
+    with pytest.raises(KeyError):
+        _ = song["invalid_key"]

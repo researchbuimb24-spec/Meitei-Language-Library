@@ -31,6 +31,18 @@ class WordEntry:
         """Convert entry to a standard Python dictionary."""
         return asdict(self)
 
+    def __getitem__(self, key: str) -> Any:
+        try:
+            return getattr(self, key)
+        except AttributeError:
+            raise KeyError(key)
+
+    def get(self, key: str, default: Any = None) -> Any:
+        return getattr(self, key, default)
+
+    def __contains__(self, key: str) -> bool:
+        return hasattr(self, key)
+
     def __str__(self) -> str:
         return f"{self.word} ({self.transliteration}): {self.meaning_en} [{self.part_of_speech}]"
 

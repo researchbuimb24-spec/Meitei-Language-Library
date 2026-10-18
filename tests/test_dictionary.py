@@ -120,3 +120,13 @@ def test_vocabulary_summary():
     assert summary["categories_count"] >= 10
     assert summary["parts_of_speech_count"] >= 5
     assert isinstance(summary["categories"], dict)
+
+
+def test_word_entry_dict_access():
+    w = get_word("khurumjari")
+    assert w["word"] == "ꯈꯨꯔꯨꯝꯖꯔꯤ"
+    assert w["meaning_en"] == w.meaning_en
+    assert w.get("nonexistent", "fallback") == "fallback"
+    assert "meaning_en" in w
+    with pytest.raises(KeyError):
+        _ = w["nonexistent"]

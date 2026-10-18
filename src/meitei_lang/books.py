@@ -34,6 +34,18 @@ class Chapter:
         """Convert chapter to a standard dictionary."""
         return asdict(self)
 
+    def __getitem__(self, key: str) -> Any:
+        try:
+            return getattr(self, key)
+        except AttributeError:
+            raise KeyError(key)
+
+    def get(self, key: str, default: Any = None) -> Any:
+        return getattr(self, key, default)
+
+    def __contains__(self, key: str) -> bool:
+        return hasattr(self, key)
+
     def __str__(self) -> str:
         return f"Chapter {self.chapter_number}: {self.title} ({self.title_en})"
 
@@ -84,6 +96,18 @@ class Book:
         d = asdict(self)
         d["chapters"] = [ch.to_dict() for ch in self.chapters]
         return d
+
+    def __getitem__(self, key: str) -> Any:
+        try:
+            return getattr(self, key)
+        except AttributeError:
+            raise KeyError(key)
+
+    def get(self, key: str, default: Any = None) -> Any:
+        return getattr(self, key, default)
+
+    def __contains__(self, key: str) -> bool:
+        return hasattr(self, key)
 
     def __str__(self) -> str:
         return f"Book '{self.title}' ({self.title_en}) by {self.author} [{len(self.chapters)} chapters]"

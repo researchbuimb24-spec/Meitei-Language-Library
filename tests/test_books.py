@@ -73,3 +73,21 @@ def test_search_books():
     results = search_books("Pebet")
     assert len(results) > 0
     assert any("Pebet" in r["chapter_title_en"] or "Pebet" in r["matched_text"] for r in results)
+
+
+def test_book_and_chapter_dict_access():
+    book = get_book("khamba_thoibi")
+    assert book["book_id"] == "khamba_thoibi"
+    assert "author" in book
+    assert book.get("genre") == book.genre
+    assert book.get("nonexistent", "default") == "default"
+    with pytest.raises(KeyError):
+        _ = book["invalid_key"]
+
+    ch = book.get_chapter(1)
+    assert ch["chapter_number"] == 1
+    assert "title" in ch
+    assert ch.get("title_en") == ch.title_en
+    assert ch.get("missing", 42) == 42
+    with pytest.raises(KeyError):
+        _ = ch["missing"]
