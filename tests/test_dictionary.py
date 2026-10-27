@@ -21,15 +21,15 @@ from meitei_lang.exceptions import WordNotFoundError
 
 
 def test_vocabulary_count():
-    # Requirement: At least 3,000 unique entries
+    # Requirement: At least 50,000 unique verified entries
     total = count_words()
-    assert total >= 3000, f"Expected at least 3,000 words, got {total}"
+    assert total >= 50000, f"Expected at least 50,000 words, got {total}"
     assert get_vocabulary_count() == total
 
 
 def test_word_entry_structure():
     entries = load_vocabulary()
-    assert len(entries) >= 3000
+    assert len(entries) >= 50000
     entry = entries[0]
     assert isinstance(entry, WordEntry)
     assert entry.word
@@ -163,4 +163,39 @@ def test_epic_cultural_vocabulary():
     assert chitrangada is not None
     assert chitrangada.word == "ꯆꯤꯇ꯭ꯔꯥꯡꯒꯗꯥ"
     assert "Chitrangada" in chitrangada.meaning_en
+
+
+def test_expanded_50k_vocabulary_domains():
+    # Test botany
+    uningthou = lookup("uningthou")
+    assert uningthou is not None
+    assert uningthou.word == "ꯎꯅꯤꯡꯊꯧ"
+    assert "Phoebe hainesiana" in uningthou.meaning_en or "King of Trees" in uningthou.meaning_en
+
+    # Test fauna
+    sangai = lookup("sangai")
+    assert sangai is not None
+    assert sangai.word == "ꯁꯥꯉꯥꯏ"
+
+    # Test martial arts
+    thang_ta = lookup("thang-ta")
+    assert thang_ta is not None
+    assert thang_ta.word == "ꯊꯥꯡ-ꯇꯥ"
+
+    # Test geography
+    loktak = lookup("loktak pat")
+    assert loktak is not None
+    assert "Loktak Lake" in loktak.meaning_en
+
+    # Test verb inflectional paradigm
+    chatkhiba = lookup("chatkhiba")
+    assert chatkhiba is not None
+    assert "walk" in chatkhiba.meaning_en or "completed" in chatkhiba.meaning_en
+
+    # Test noun case declension
+    imunggi = lookup("imunggi")
+    assert imunggi is not None
+    assert imunggi.word == "ꯏꯃꯨꯡꯒꯤ"
+    assert "genitive" in imunggi.meaning_en or "of the" in imunggi.meaning_en
+
 

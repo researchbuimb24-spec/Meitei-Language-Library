@@ -7,7 +7,7 @@ from meitei_lang import language_info
 
 def test_package_metadata():
     assert hasattr(mt, "__version__")
-    assert mt.__version__ == "0.2.0"
+    assert mt.__version__ == "0.3.0"
     assert hasattr(mt, "__author__")
 
 
@@ -15,7 +15,7 @@ def test_top_level_api():
     # Vocabulary
     assert callable(mt.get_word)
     assert callable(mt.count_words)
-    assert mt.count_words() >= 3000
+    assert mt.count_words() >= 50000
 
     # Transliteration
     assert callable(mt.transliterate)

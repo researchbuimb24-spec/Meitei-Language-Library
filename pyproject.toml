@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "meitei-lang"
-version = "0.2.0"
-description = "Comprehensive Python library for the Meitei (Manipuri) language, supporting Meitei Mayek script, transliteration, 3,000+ vocabulary entries, reading texts, and songs."
+version = "0.3.0"
+description = "Comprehensive Python library for the Meitei (Manipuri) language, supporting Meitei Mayek script, transliteration, 50,000+ vocabulary entries, reading texts, and songs."
 readme = "README.md"
 authors = [
     { name = "Meitei Language Project Maintainers" }

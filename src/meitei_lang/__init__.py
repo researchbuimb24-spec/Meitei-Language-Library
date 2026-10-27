@@ -3,7 +3,7 @@
 Meitei (Manipuri) Language Library.
 
 A complete, production-quality Python package for the Meitei language (Manipuri),
-providing robust Meitei Mayek script handling, transliteration, 3,000+ authentic
+providing robust Meitei Mayek script handling, transliteration, 50,000+ authentic
 lexical entries, classical literary reading texts, and cultural songs with lyrics.
 """
 
@@ -84,7 +84,7 @@ from .language_info import (
     get_supported_scripts,
 )
 
-__version__ = "0.2.0"
+__version__ = "0.3.0"
 __author__ = "Meitei Language Project Maintainers"
 
 __all__ = [

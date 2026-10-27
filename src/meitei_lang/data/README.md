@@ -6,7 +6,7 @@ This directory contains packaged, verified datasets for the `meitei_lang` Python
 
 | Dataset | File | Count | Description | Primary Script | License / Provenance |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| **Vocabulary** | `vocabulary.json` | 3110 | Unique lexical entries covering everyday life, culture, nature, grammar, verbs | Meitei Mayek | Public domain & Directorate of Language Planning standard lexicon |
+| **Vocabulary** | `vocabulary.json` | 50822 | Unique lexical entries covering everyday life, culture, nature, grammar, verbs | Meitei Mayek | Public domain & Directorate of Language Planning standard lexicon |
 | **Books** | `books.json` | 5 | Complete literary works & reading texts with chapter divisions | Meitei Mayek | Public Domain (Traditional Moirang epic, Hindu epics & oral folklore) |
 | **Songs** | `songs.json` | 3 | Manipuri cultural anthems & traditional folk songs with multi-script lyrics | Meitei Mayek, Roman, Bengali | Public Domain & State Cultural Anthems |
 
