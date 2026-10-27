@@ -130,3 +130,37 @@ def test_word_entry_dict_access():
     assert "meaning_en" in w
     with pytest.raises(KeyError):
         _ = w["nonexistent"]
+
+
+def test_epic_cultural_vocabulary():
+    # Test lookup of epic and cultural terms added for Ramayana and Mahabharata
+    ramayan = lookup("ramayan")
+    assert ramayan is not None
+    assert ramayan.word == "ꯔꯥꯃꯥꯌꯟ"
+    assert "Ramayana" in ramayan.meaning_en
+
+    mahabharat = lookup("mahabharat")
+    assert mahabharat is not None
+    assert mahabharat.word == "ꯃꯍꯥꯚꯥꯔꯠ"
+    assert "Mahabharata" in mahabharat.meaning_en
+
+    dharma = lookup("dharma")
+    assert dharma is not None
+    assert dharma.word == "ꯙꯔꯃ"
+    assert "Dharma" in dharma.meaning_en
+
+    gita = lookup("gita")
+    assert gita is not None
+    assert gita.word == "ꯒꯤꯇꯥ"
+    assert "Bhagavad Gita" in gita.meaning_en
+
+    babrubahan = lookup("babrubahan")
+    assert babrubahan is not None
+    assert babrubahan.word == "ꯕꯕ꯭ꯔꯨꯕꯥꯍꯟ"
+    assert "Babruvahana" in babrubahan.meaning_en
+
+    chitrangada = lookup("chitrangada")
+    assert chitrangada is not None
+    assert chitrangada.word == "ꯆꯤꯇ꯭ꯔꯥꯡꯒꯗꯥ"
+    assert "Chitrangada" in chitrangada.meaning_en
+

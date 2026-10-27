@@ -4,7 +4,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Meitei Mayek Supported](https://img.shields.io/badge/Script-Meitei%20Mayek%20%28%EA%AE%A9%EA%AE%B5%EA%AE%AA%EA%AE%A9%20%EA%AE%A9%EA%AE%AF%EA%AE%A1%29-brightgreen.svg)](https://unicode.org/charts/PDF/UABC0.pdf)
 
-`meitei-lang` is a complete, reusable, production-ready Python library for the **Meitei language (Manipuri)**. It provides native support for the indigenous **Meitei Mayek** script, bidirectional transliteration between Meitei Mayek, Bengali-Manipuri, and Romanization, a verified vocabulary dataset containing **3,101 unique lexical entries**, classical reading literature with chapter breakdowns, and authentic Manipuri songs with multi-script lyrics.
+`meitei-lang` is a complete, reusable, production-ready Python library for the **Meitei language (Manipuri)**. It provides native support for the indigenous **Meitei Mayek** script, bidirectional transliteration between Meitei Mayek, Bengali-Manipuri, and Romanization, a verified vocabulary dataset containing **3,110 unique lexical entries**, classical reading literature with chapter breakdowns, and authentic Manipuri songs with multi-script lyrics.
 
 ---
 
@@ -19,16 +19,18 @@
    - Convert seamlessly between **Meitei Mayek**, **Roman transliteration**, and **Bengali-script Manipuri**.
    - Handles conjuncts, vowel signs (*cheitap*), coda consonants (*lonsum*), and native digits.
 
-3. **Curated 3,100+ Vocabulary Dataset**:
-   - **3,101 unique verified words** across 20+ thematic categories (`actions`, `culture`, `nature`, `family`, `food`, `society`, `body`, `grammar`, etc.).
+3. **Curated 3,110+ Vocabulary Dataset**:
+   - **3,110 unique verified words** across 20+ thematic categories (`actions`, `culture`, `nature`, `family`, `food`, `society`, `body`, `grammar`, etc.).
    - Includes English definitions, parts of speech, categories, and Romanization.
    - Fast lookup, substring search, filtering, and random word sampling.
 
 4. **Literary Works & Reading Texts**:
    - Packaged classical texts with full Meitei Mayek script, English translations, and chapter divisions:
      - ***Khamba Thoibi*** (4 chapters) — The great national epic of Moirang.
-     - ***Phunga Wari*** (3 chapters) — Traditional domestic folktales (*Pebet and the Tiger*, *Tale of Tapta*, *The Old Couple*).
+     - ***Phunga Wari*** (4 chapters) — Traditional domestic folktales (*Pebet and the Tiger*, *Tale of Tapta*, *The Old Couple*, *The Fox and the Crow*).
      - ***Sana Leibak Chronicles*** (3 chapters) — Historical chronicles, Kangla fort, Sanamahi religion, and Loktak Lake.
+     - ***Ramayana*** (4 chapters) — Sacred Hindu epic adapted into 18th-century Meitei literature by court poet Angom Gopi.
+     - ***Mahabharata*** (4 chapters) — Sacred Hindu epic chronicling the Pandavas, Lord Krishna's Bhagavad Gita, Arjuna's sacred journey to Manipur, Princess Chitrangada, and King Babruvahana.
 
 5. **Manipuri Songs & Ballads**:
    - Iconic cultural and traditional songs with synchronized lyrics in **Meitei Mayek**, **Roman**, **Bengali script**, and **English**:

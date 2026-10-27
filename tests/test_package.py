@@ -7,7 +7,7 @@ from meitei_lang import language_info
 
 def test_package_metadata():
     assert hasattr(mt, "__version__")
-    assert mt.__version__ == "0.1.0"
+    assert mt.__version__ == "0.2.0"
     assert hasattr(mt, "__author__")
 
 

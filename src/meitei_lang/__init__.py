@@ -84,7 +84,7 @@ from .language_info import (
     get_supported_scripts,
 )
 
-__version__ = "0.1.0"
+__version__ = "0.2.0"
 __author__ = "Meitei Language Project Maintainers"
 
 __all__ = [

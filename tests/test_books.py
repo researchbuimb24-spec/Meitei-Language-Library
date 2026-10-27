@@ -91,3 +91,72 @@ def test_book_and_chapter_dict_access():
     assert ch.get("missing", 42) == 42
     with pytest.raises(KeyError):
         _ = ch["missing"]
+
+
+def test_ramayana_book():
+    book = get_book("ramayana")
+    assert book.book_id == "ramayana"
+    assert book.title == "ꯔꯥꯃꯥꯌꯟ"
+    assert "Ramayana" in book.title_en
+    assert book.total_chapters() == 4
+    assert "Angom Gopi" in book.author
+    assert book.language == "Meitei (Manipuri)"
+    assert book.script == "Meitei Mayek"
+
+    # Chapter 1
+    ch1 = book.get_chapter(1)
+    assert "ꯑꯌꯣꯙ꯭ꯌꯥ" in ch1.title
+    assert "Ayodhya" in ch1.title_en
+    assert ch1.word_count() > 30
+
+    # Chapter 3
+    ch3 = book.get_chapter(3)
+    assert "ꯍꯅꯨꯃꯥꯟ" in ch3.title
+    assert "Hanuman" in ch3.title_en
+
+    # Full text contains Meitei Mayek characters
+    text = book.full_text()
+    assert len(text) > 500
+    assert any(0xABC0 <= ord(c) <= 0xABFF for c in text)
+
+
+def test_mahabharata_book():
+    book = get_book("mahabharata")
+    assert book.book_id == "mahabharata"
+    assert book.title == "ꯃꯍꯥꯚꯥꯔꯠ"
+    assert "Mahabharata" in book.title_en
+    assert book.total_chapters() == 4
+    assert "Manipur" in book.description
+
+    # Chapter 2 (Chitrangada)
+    ch2 = book.get_chapter(2)
+    assert "ꯆꯤꯇ꯭ꯔꯥꯡꯒꯗꯥ" in ch2.title
+    assert "Chitrangada" in ch2.title_en
+
+    # Chapter 3 (Babruvahana)
+    ch3 = book.get_chapter(3)
+    assert "ꯕꯕ꯭ꯔꯨꯕꯥꯍꯟ" in ch3.title
+    assert "Babruvahana" in ch3.title_en
+
+    # Full text
+    text = book.full_text()
+    assert len(text) > 500
+    assert any(0xABC0 <= ord(c) <= 0xABFF for c in text)
+
+
+def test_search_epics():
+    # Search for Chitrangada
+    chitrangada_res = search_books("Chitrangada")
+    assert len(chitrangada_res) > 0
+    assert any(r["book_id"] == "mahabharata" for r in chitrangada_res)
+
+    # Search for Hanuman
+    hanuman_res = search_books("Hanuman")
+    assert len(hanuman_res) > 0
+    assert any(r["book_id"] == "ramayana" for r in hanuman_res)
+
+    # Search for Babruvahana
+    babru_res = search_books("Babruvahana")
+    assert len(babru_res) > 0
+    assert any(r["book_id"] == "mahabharata" for r in babru_res)
+

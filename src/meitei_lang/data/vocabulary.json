@@ -4180,6 +4180,106 @@
     "verified": true
   },
   {
+    "word": "ꯔꯥꯃꯥꯌꯟ",
+    "script": "Meitei Mayek",
+    "transliteration": "ramayan",
+    "meaning_en": "Ramayana (sacred Hindu epic of Prince Rama adapted into Meitei literature)",
+    "part_of_speech": "noun",
+    "category": "culture",
+    "source": "Manipuri-English Lexicon / Directorate of Language Planning, Manipur",
+    "verified": true
+  },
+  {
+    "word": "ꯃꯍꯥꯚꯥꯔꯠ",
+    "script": "Meitei Mayek",
+    "transliteration": "mahabharat",
+    "meaning_en": "Mahabharata (sacred Hindu epic of the Pandavas and Kurukshetra with historical links to Manipur)",
+    "part_of_speech": "noun",
+    "category": "culture",
+    "source": "Manipuri-English Lexicon / Directorate of Language Planning, Manipur",
+    "verified": true
+  },
+  {
+    "word": "ꯋꯥꯔꯤ ꯂꯤꯕ",
+    "script": "Meitei Mayek",
+    "transliteration": "wari leeba",
+    "meaning_en": "traditional Manipuri oral reciting and dramatic storytelling of epics",
+    "part_of_speech": "noun",
+    "category": "culture",
+    "source": "Manipuri-English Lexicon / Directorate of Language Planning, Manipur",
+    "verified": true
+  },
+  {
+    "word": "ꯑꯁ꯭ꯋꯃꯦꯙ",
+    "script": "Meitei Mayek",
+    "transliteration": "aswamedh",
+    "meaning_en": "Ashvamedha (ancient royal horse sacrifice associated with Arjuna and Babruvahana)",
+    "part_of_speech": "noun",
+    "category": "culture",
+    "source": "Manipuri-English Lexicon / Directorate of Language Planning, Manipur",
+    "verified": true
+  },
+  {
+    "word": "ꯙꯔꯃ",
+    "script": "Meitei Mayek",
+    "transliteration": "dharma",
+    "meaning_en": "Dharma (righteousness, universal cosmic order and moral duty)",
+    "part_of_speech": "noun",
+    "category": "culture",
+    "source": "Manipuri-English Lexicon / Directorate of Language Planning, Manipur",
+    "verified": true
+  },
+  {
+    "word": "ꯒꯤꯇꯥ",
+    "script": "Meitei Mayek",
+    "transliteration": "gita",
+    "meaning_en": "Bhagavad Gita (sacred philosophical scripture of wisdom delivered by Lord Krishna)",
+    "part_of_speech": "noun",
+    "category": "culture",
+    "source": "Manipuri-English Lexicon / Directorate of Language Planning, Manipur",
+    "verified": true
+  },
+  {
+    "word": "ꯕꯕ꯭ꯔꯨꯕꯥꯍꯟ",
+    "script": "Meitei Mayek",
+    "transliteration": "babrubahan",
+    "meaning_en": "Babruvahana (heroic prince and king of ancient Manipur, son of Arjuna and Chitrangada)",
+    "part_of_speech": "noun",
+    "category": "culture",
+    "source": "Manipuri-English Lexicon / Directorate of Language Planning, Manipur",
+    "verified": true
+  },
+  {
+    "word": "ꯆꯤꯇ꯭ꯔꯥꯡꯒꯗꯥ",
+    "script": "Meitei Mayek",
+    "transliteration": "chitrangada",
+    "meaning_en": "Chitrangada (warrior princess of Manipur, mother of Babruvahana and consort of Arjuna)",
+    "part_of_speech": "noun",
+    "category": "culture",
+    "source": "Manipuri-English Lexicon / Directorate of Language Planning, Manipur",
+    "verified": true
+  },
+  {
+    "word": "ꯁ꯭ꯋꯌꯝꯕꯔ",
+    "script": "Meitei Mayek",
+    "transliteration": "swayambar",
+    "meaning_en": "Swayamvara (ancient practice where a princess chooses her groom)",
+    "part_of_speech": "noun",
+    "category": "culture",
+    "source": "Manipuri-English Lexicon / Directorate of Language Planning, Manipur",
+    "verified": true
+  },
+  {
+    "word": "ꯔꯥꯃ ꯔꯥꯖ꯭ꯌ",
+    "script": "Meitei Mayek",
+    "transliteration": "rama rajya",
+    "meaning_en": "Rama Rajya (reign of ideal righteousness, justice and peace)",
+    "part_of_speech": "noun",
+    "category": "culture",
+    "source": "Manipuri-English Lexicon / Directorate of Language Planning, Manipur",
+    "verified": true
+  },
+  {
     "word": "ꯐꯤ",
     "script": "Meitei Mayek",
     "transliteration": "phi",
@@ -7224,16 +7324,6 @@
     "script": "Meitei Mayek",
     "transliteration": "basi khongba",
     "meaning_en": "to play the bamboo flute",
-    "part_of_speech": "verb",
-    "category": "actions",
-    "source": "Manipuri-English Lexicon / Directorate of Language Planning, Manipur",
-    "verified": true
-  },
-  {
-    "word": "ꯋꯥꯔꯤ ꯂꯤꯕ",
-    "script": "Meitei Mayek",
-    "transliteration": "wari liba",
-    "meaning_en": "to narrate folktales / tell stories",
     "part_of_speech": "verb",
     "category": "actions",
     "source": "Manipuri-English Lexicon / Directorate of Language Planning, Manipur",

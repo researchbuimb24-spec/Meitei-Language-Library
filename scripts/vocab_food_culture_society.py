@@ -110,6 +110,16 @@ CULTURE_AND_TRADITION = [
     ("ꯁꯦꯅꯥꯄꯇꯤ", "senapati", "commander-in-chief of the armed forces", "noun", "culture"),
     ("ꯃꯩꯔꯥ ꯄꯥꯏꯕꯤ", "meira paibi", "women torchbearers (legendary civil rights guardians of Manipur)", "noun", "culture"),
     ("ꯃꯩꯔꯥ", "meira", "bamboo flaming torch", "noun", "culture"),
+    ("ꯔꯥꯃꯥꯌꯟ", "ramayan", "Ramayana (sacred Hindu epic of Prince Rama adapted into Meitei literature)", "noun", "culture"),
+    ("ꯃꯍꯥꯚꯥꯔꯠ", "mahabharat", "Mahabharata (sacred Hindu epic of the Pandavas and Kurukshetra with historical links to Manipur)", "noun", "culture"),
+    ("ꯋꯥꯔꯤ ꯂꯤꯕ", "wari leeba", "traditional Manipuri oral reciting and dramatic storytelling of epics", "noun", "culture"),
+    ("ꯑꯁ꯭ꯋꯃꯦꯙ", "aswamedh", "Ashvamedha (ancient royal horse sacrifice associated with Arjuna and Babruvahana)", "noun", "culture"),
+    ("ꯙꯔꯃ", "dharma", "Dharma (righteousness, universal cosmic order and moral duty)", "noun", "culture"),
+    ("ꯒꯤꯇꯥ", "gita", "Bhagavad Gita (sacred philosophical scripture of wisdom delivered by Lord Krishna)", "noun", "culture"),
+    ("ꯕꯕ꯭ꯔꯨꯕꯥꯍꯟ", "babrubahan", "Babruvahana (heroic prince and king of ancient Manipur, son of Arjuna and Chitrangada)", "noun", "culture"),
+    ("ꯆꯤꯇ꯭ꯔꯥꯡꯒꯗꯥ", "chitrangada", "Chitrangada (warrior princess of Manipur, mother of Babruvahana and consort of Arjuna)", "noun", "culture"),
+    ("ꯁ꯭ꯋꯌꯝꯕꯔ", "swayambar", "Swayamvara (ancient practice where a princess chooses her groom)", "noun", "culture"),
+    ("ꯔꯥꯃ ꯔꯥꯖ꯭ꯌ", "rama rajya", "Rama Rajya (reign of ideal righteousness, justice and peace)", "noun", "culture"),
 ]
 
 CLOTHING_AND_TEXTILES = [

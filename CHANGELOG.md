@@ -5,6 +5,17 @@ All notable changes to `meitei-lang` will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.2.0] - 2026-10-27
+
+### Added
+- **Ramayana & Mahabharata Sacred Epics**:
+  - *Ramayana* (4 chapters): Ayodhya Kanda & Sita's Swayamvara, Panchavati Forest Exile & Abduction of Sita, Hanuman's Devotion & Building Rama Setu, War of Lanka & Return to Ayodhya.
+  - *Mahabharata* (4 chapters): Pandavas, Kauravas & Path of Righteousness, Arjuna's Journey to Ancient Manipur & Princess Chitrangada, Ashvamedha Sacrifice & Prince Babruvahana's Valor, Kurukshetra War & Eternal Message of the Gita.
+- **Cultural & Epic Vocabulary**:
+  - Expanded lexicon with 9 new verified cultural entries for Ramayana, Mahabharata, Wari Leeba, Ashvamedha, Dharma, Gita, Babruvahana, Chitrangada, Swayamvara, and Rama Rajya, bringing total verified vocabulary to 3,110 entries.
+- **Testing**:
+  - Dedicated unit tests for Ramayana and Mahabharata retrieval, chapter inspection, and cross-epic search.
+
 ## [0.1.0] - 2026-10-17
 
 ### Added
