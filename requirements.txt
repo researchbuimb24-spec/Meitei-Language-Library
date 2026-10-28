@@ -1,0 +1,3 @@
+# meitei-lang runtime dependencies
+# The core library has zero external runtime dependencies and uses standard Python >= 3.9
+

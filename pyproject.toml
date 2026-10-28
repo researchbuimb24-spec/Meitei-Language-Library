@@ -40,6 +40,9 @@ classifiers = [
 ]
 dependencies = []
 
+[project.scripts]
+meitei = "meitei_lang.cli:main"
+
 [project.optional-dependencies]
 dev = [
     "pytest>=7.0.0",
