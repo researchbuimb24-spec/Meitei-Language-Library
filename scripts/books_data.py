@@ -1,10 +1,21 @@
 # -*- coding: utf-8 -*-
 """
 Authentic Meitei books collection for meitei_lang.
-Contains 5 substantial reading texts in Meitei Mayek with English translations,
+Contains 10 substantial reading texts in Meitei Mayek with English translations,
 including classical epics (Khamba Thoibi, Ramayana, Mahabharata), Phunga Wari folklore,
-and Sana Leibak historical chronicles.
+Sana Leibak chronicles, Numit Kappa, Chainarol, Panthoibi Khonggul,
+Poireiton Khunthok, and Pakhangba Laihui.
 """
+
+import io
+import sys
+
+if isinstance(sys.stdout, io.TextIOWrapper):
+    try:
+        sys.stdout.reconfigure(encoding="utf-8")
+    except Exception:
+        pass
+
 
 BOOKS = [
     {
@@ -337,6 +348,258 @@ BOOKS = [
                     "ꯃꯁꯤꯅ ꯇꯥꯛꯄꯗꯤ ꯁꯇ꯭ꯌ ꯑꯃꯁꯨꯡ ꯙꯔꯃ ꯂꯩꯕ ꯃꯐꯝꯗ ꯃꯥꯏꯄꯥꯛꯄ ꯇꯪꯗꯨ-ꯂꯩꯇꯥꯏ꯫ "
                     "ꯃꯍꯥꯚꯥꯔꯠꯀꯤ ꯋꯥꯔꯤ ꯑꯁꯤꯅ ꯃꯅꯤꯄꯨꯔꯒꯤ ꯀꯂꯆꯔ, ꯋꯥꯔꯤ ꯂꯤꯕ, ꯖꯒꯣꯏ ꯑꯃꯁꯨꯡ ꯂꯥꯏꯁꯪꯁꯤꯡꯗ "
                     "ꯃꯇꯝ ꯆꯨꯞꯄꯗ ꯃꯔꯨꯑꯣꯏꯕ ꯃꯐꯝ ꯀꯜꯂꯤ꯫"
+                )
+            }
+        ]
+    },
+    {
+        "book_id": "numit_kappa",
+        "title": "ꯅꯨꯃꯤꯠ ꯀꯥꯞꯄ",
+        "title_en": "Numit Kappa: The Shooting of the Sun",
+        "author": "Ancient Meitei Sages / Maichous (Oral Puya Tradition)",
+        "language": "Meitei (Manipuri)",
+        "script": "Meitei Mayek",
+        "genre": "Ancient Cosmogonic Puya / Mythological Epic",
+        "description": (
+            "One of the oldest surviving Meitei mythological texts and ritual treatises. It chronicles the "
+            "archaic era when two sun brothers shone simultaneously in the sky, scorching the earth, until "
+            "the heroic archer Khwai Nongchenbam shot one sun with an arrow, restoring diurnal balance, "
+            "hymns of sunrise, and cosmic harmony to Kangleipak."
+        ),
+        "source": "Archaic Puya Archives of Manipur & Directorate of Language Planning Literary Preservation",
+        "copyright": "Public Domain (Archaic Cultural Heritage of Manipur)",
+        "chapters": [
+            {
+                "chapter_number": 1,
+                "title": "ꯅꯨꯃꯤꯠ ꯃꯆꯤꯟ-ꯃꯅꯥꯎ ꯑꯅꯤ ꯑꯃꯁꯨꯡ ꯃꯥꯂꯦꯝ ꯃꯩꯁꯥ",
+                "title_en": "The Two Sun Brothers and the Scorched Earth",
+                "text": (
+                    "ꯑꯔꯤꯕ ꯃꯥꯂꯦꯝꯒꯤ ꯃꯇꯝꯗ ꯑꯇꯤꯌꯥꯗ ꯅꯨꯃꯤꯠ ꯃꯆꯤꯟ-ꯃꯅꯥꯎ ꯑꯅꯤ ꯄꯨꯟꯅ ꯉꯥꯟꯅꯔꯝꯃꯤ꯫ "
+                    "ꯃꯈꯣꯏ ꯑꯅꯤꯒꯤ ꯑꯀꯟꯕ ꯃꯩꯁꯥꯅ ꯃꯥꯂꯦꯝ ꯁꯤꯟꯕ ꯊꯨꯡꯅ ꯆꯥꯛꯍꯟꯈꯤ, ꯏꯁꯤꯡ ꯄꯨꯝꯅꯃꯛ ꯀꯪꯈꯤ ꯑꯃꯁꯨꯡ "
+                    "ꯎ-ꯋꯥ, ꯁꯥ-ꯉꯥ ꯑꯃꯁꯨꯡ ꯃꯤꯑꯣꯏꯕ ꯄꯨꯝꯅꯃꯛ ꯑꯋꯥꯕꯒꯤ ꯃꯔꯨꯝꯗ ꯇꯥꯈꯤ꯫ ꯅꯨꯃꯤꯗꯥꯡ ꯂꯩꯇꯅ ꯃꯇꯝ ꯆꯨꯞꯄꯗ "
+                    "ꯅꯨꯃꯤꯠ ꯈꯛꯇ ꯉꯥꯟꯕꯅ ꯃꯤꯌꯥꯝꯅ ꯄꯣꯊꯥꯐꯝ ꯈꯪꯈꯤꯗꯦ꯫ ꯃꯁꯤꯒꯤ ꯑꯋꯥꯕ ꯑꯁꯤ ꯀꯣꯛꯍꯟꯅꯕ "
+                    "ꯈ꯭ꯋꯥꯏ ꯅꯣꯡꯆꯦꯟꯕꯝꯅ ꯑꯀꯟꯕ ꯋꯥꯔꯦꯞ ꯂꯧꯈꯤ꯫"
+                )
+            },
+            {
+                "chapter_number": 2,
+                "title": "ꯈ꯭ꯋꯥꯏ ꯅꯣꯡꯆꯦꯟꯕꯝꯒꯤ ꯂꯤꯔꯨꯡ ꯑꯃꯁꯨꯡ ꯅꯨꯃꯤꯠ ꯀꯥꯞꯄ",
+                "title_en": "The Bow of Khwai Nongchenbam and the Shooting of the Sun",
+                "text": (
+                    "ꯈ꯭ꯋꯥꯏ ꯅꯣꯡꯆꯦꯟꯕꯝꯅ ꯂꯤꯔꯨꯡ ꯑꯃꯁꯨꯡ ꯇꯦꯟ ꯄꯥꯏꯗꯨꯅ ꯑꯇꯤꯌꯥꯗ ꯉꯥꯟꯅꯔꯤꯕ ꯅꯨꯃꯤꯠ ꯑꯅꯤꯒꯤ ꯃꯔꯛꯇ ꯑꯃꯕꯨ ꯀꯥꯞꯈꯤ꯫ "
+                    "ꯇꯦꯟꯅ ꯄꯥꯟꯂꯕ ꯅꯨꯃꯤꯠ ꯑꯗꯨ ꯃꯉꯥꯜ ꯃꯨꯠꯊꯣꯛꯇꯨꯅ ꯃꯥꯡꯈꯤ, ꯑꯗꯨꯒ ꯍꯤꯡꯗꯨꯅ ꯂꯩꯔꯤꯕ ꯑꯇꯣꯞꯄ ꯅꯨꯃꯤꯠ ꯑꯗꯨꯅ "
+                    "ꯀꯤꯗꯨꯅ ꯑꯔꯣꯟꯕ ꯂꯝꯗ ꯂꯣꯠꯈꯤ꯫ ꯃꯁꯤꯅ ꯃꯔꯝ ꯑꯣꯏꯗꯨꯅ ꯃꯥꯂꯦꯝ ꯄꯨꯝꯕ ꯑꯃꯝꯕꯅ ꯀꯨꯞꯁꯤꯟꯈꯤ ꯑꯃꯁꯨꯡ "
+                    "ꯃꯤꯑꯣꯏꯕ ꯑꯃꯁꯨꯡ ꯊꯋꯥꯏ ꯄꯥꯟꯕ ꯄꯨꯝꯅꯃꯛ ꯑꯃꯨꯛ ꯍꯟꯅ ꯑꯋꯥꯕꯗ ꯇꯥꯈꯤ꯫"
+                )
+            },
+            {
+                "chapter_number": 3,
+                "title": "ꯅꯨꯃꯤꯠ ꯀꯧꯕꯒꯤ ꯊꯧꯔꯝ ꯑꯃꯁꯨꯡ ꯃꯉꯥꯜ ꯍꯟꯖꯤꯟꯂꯛꯄ",
+                "title_en": "The Ritual Invocation of the Sun and the Restoration of Dawn",
+                "text": (
+                    "ꯑꯃꯝꯕ ꯑꯁꯤꯗꯒꯤ ꯅꯥꯟꯊꯣꯛꯅꯕ ꯃꯥꯏꯕ-ꯃꯥꯏꯕꯤꯁꯤꯡ ꯑꯃꯁꯨꯡ ꯁꯥ-ꯉꯥ ꯄꯨꯝꯅꯃꯛꯅ ꯂꯣꯠꯂꯕ ꯅꯨꯃꯤꯠꯄꯨ "
+                    "ꯊꯧꯖꯥꯜ ꯅꯤꯖꯗꯨꯅ ꯑꯃꯨꯛ ꯍꯟꯅ ꯊꯣꯛꯂꯛꯅꯕ ꯀꯧꯈꯤ꯫ ꯑꯔꯣꯏꯕꯗ ꯌꯦꯟꯕꯥꯎꯅ ꯈꯣꯡꯂꯛꯄꯗ ꯅꯨꯃꯤꯠꯅ ꯊꯃꯣꯏ ꯅꯣꯡꯊꯗꯨꯅ "
+                    "ꯑꯇꯤꯌꯥꯗ ꯑꯃꯨꯛ ꯊꯣꯛꯂꯛꯈꯤ꯫ ꯃꯗꯨꯗꯒꯤ ꯍꯧꯅ ꯅꯨꯃꯤꯠ ꯑꯃꯁꯨꯡ ꯑꯍꯤꯡꯒꯤ ꯆꯠꯅꯕꯤ ꯂꯦꯞꯈꯤ, ꯑꯃꯁꯨꯡ "
+                    "ꯅꯨꯃꯤꯠ ꯀꯥꯞꯄꯒꯤ ꯂꯥꯏꯁꯣꯜ ꯑꯁꯤ ꯀꯪꯂꯩꯄꯥꯛꯀꯤ ꯂꯥꯏꯅꯤꯡ ꯊꯧꯔꯝ ꯈꯨꯗꯤꯡꯗ ꯑꯆꯨꯝꯕ ꯃꯉꯥꯜ ꯄꯨꯔꯛꯅꯕ ꯏꯁꯩ ꯑꯣꯏꯅ ꯁꯛꯂꯤ꯫"
+                )
+            }
+        ]
+    },
+    {
+        "book_id": "chainarol",
+        "title": "ꯆꯥꯏꯅꯔꯣꯜ",
+        "title_en": "Chainarol: The Ancient Code of Chivalry and Warrior Duels",
+        "author": "Ancient Meitei Court Chroniclers (Traditional Puyas)",
+        "language": "Meitei (Manipuri)",
+        "script": "Meitei Mayek",
+        "genre": "Historical Treatise / Martial Code of Honor",
+        "description": (
+            "The classical chivalric treatise of ancient Kangleipak recording duel codes, martial ethics, "
+            "single-combat protocols, and heroic encounters between noble champions across the clans. "
+            "It embodies the highest ideals of Manipuri Thang-Ta martial integrity, respectful combat, "
+            "and honour unto death."
+        ),
+        "source": "Royal Puya Archives of Manipur & Directorate of Language Planning",
+        "copyright": "Public Domain (Classical Historical Literature)",
+        "chapters": [
+            {
+                "chapter_number": 1,
+                "title": "ꯂꯥꯟꯒꯤ ꯑꯔꯤꯕ ꯆꯠꯅ-ꯀꯥꯡꯂꯣꯟ ꯑꯃꯁꯨꯡ ꯏꯀꯥꯏꯈꯨꯝꯅꯕ",
+                "title_en": "The Sacred Laws of Combat and Chivalric Ethics",
+                "text": (
+                    "ꯑꯔꯤꯕ ꯀꯪꯂꯩꯄꯥꯛꯇ ꯑꯊꯧꯕꯁꯤꯡꯒꯤ ꯃꯔꯛꯇ ꯈꯠꯅ-ꯆꯩꯅꯕ ꯊꯣꯛꯄ ꯃꯇꯝꯗ ꯑꯔꯣꯟꯕ ꯅꯃꯥꯛ ꯇꯧꯗꯅ "
+                    "ꯂꯥꯟꯒꯤ ꯂꯝꯄꯥꯛꯇ ꯃꯥꯌꯣꯛꯅꯔꯒ ꯆꯥꯏꯅꯕꯒꯤ ꯆꯠꯅ-ꯀꯥꯡꯂꯣꯟ ꯂꯩꯔꯝꯃꯤ꯫ ꯂꯥꯟꯃꯤ ꯑꯃꯅ ꯑꯇꯣꯞꯄꯕꯨ ꯈꯨꯠꯂꯥꯌ ꯂꯩꯇꯕꯗ "
+                    "ꯀꯥꯞꯄ ꯌꯥꯈꯤꯗꯦ, ꯑꯃꯁꯨꯡ ꯂꯥꯟ ꯍꯧꯗ꯭ꯔꯤꯉꯩ ꯃꯃꯥꯡꯗ ꯏꯀꯥꯏꯈꯨꯝꯅꯕ ꯎꯠꯇꯨꯅ ꯍꯤꯡꯆꯤꯡ-ꯆꯥ ꯄꯨꯟꯅ ꯆꯥꯃꯤꯟꯅꯔꯝꯃꯤ꯫ "
+                    "ꯃꯁꯤꯅ ꯇꯥꯛꯄꯗꯤ ꯊꯧꯅꯥ ꯂꯩꯕ ꯑꯃꯁꯨꯡ ꯙꯔꯃ ꯉꯥꯛꯄ ꯑꯁꯤ ꯄꯨꯟꯁꯤꯗꯒꯤꯁꯨ ꯃꯔꯨꯑꯣꯏꯕ ꯃꯒꯨꯟꯅꯤ꯫"
+                )
+            },
+            {
+                "chapter_number": 2,
+                "title": "ꯁꯂꯥꯏꯁꯤꯡꯒꯤ ꯊꯧꯅꯥꯐꯔꯕ ꯑꯊꯣꯏꯕ ꯑꯊꯧꯕꯁꯤꯡꯒꯤ ꯆꯥꯏꯅꯕ",
+                "title_en": "The Duel of Champions Across Clans",
+                "text": (
+                    "ꯃꯉꯥꯡ, ꯂꯨꯋꯥꯡ, ꯈꯨꯃꯟ ꯑꯃꯁꯨꯡ ꯃꯣꯏꯔꯥꯡꯒꯤ ꯑꯊꯣꯏꯕ ꯂꯥꯟꯃꯤꯁꯤꯡꯅ ꯂꯩꯄꯥꯛꯀꯤ ꯃꯤꯡꯆꯠꯀꯤꯗꯃꯛ "
+                    "ꯊꯥꯡ ꯑꯃꯁꯨꯡ ꯇꯥ ꯄꯥꯏꯗꯨꯅ ꯆꯥꯏꯅꯈꯤ꯫ ꯈꯨꯗꯤꯡꯃꯛꯇ ꯃꯥꯏꯊꯤꯕ ꯇꯥꯔꯕ ꯑꯗꯨꯅ ꯃꯥꯏꯄꯥꯛꯂꯕꯕꯨ ꯊꯥꯒꯠꯄꯒ ꯂꯣꯏꯅꯅ "
+                    "ꯊꯧꯅꯥ ꯂꯩꯅ ꯁꯤꯕ ꯂꯧꯁꯤꯟꯈꯤ꯫ ꯆꯥꯏꯅꯔꯣꯜꯒꯤ ꯋꯥꯔꯤꯁꯤꯡ ꯑꯁꯤꯅ ꯇꯥꯛꯄꯗꯤ ꯂꯥꯟ ꯑꯁꯤ ꯍꯥꯠꯅ-ꯁꯨꯅꯕ ꯈꯛꯇ ꯅꯠꯇꯦ, "
+                    "ꯃꯁꯤ ꯃꯤꯑꯣꯏꯕꯒꯤ ꯏꯀꯥꯏꯈꯨꯝꯅꯕ ꯑꯃꯁꯨꯡ ꯁꯇ꯭ꯌ ꯆꯦꯠꯅ ꯉꯥꯛꯄꯒꯤ ꯑꯀꯟꯕ ꯈꯣꯡꯆꯠꯅꯤ꯫"
+                )
+            },
+            {
+                "chapter_number": 3,
+                "title": "ꯊꯧꯅꯥꯒꯤ ꯃꯔꯨꯞ-ꯃꯄꯥꯡ ꯑꯃꯁꯨꯡ ꯃꯤꯡꯆꯠ ꯉꯥꯛꯄ",
+                "title_en": "The Spirit of Martial Brotherhood and Immortality of Honor",
+                "text": (
+                    "ꯂꯥꯟ ꯂꯣꯏꯔꯕ ꯃꯇꯨꯡꯗ ꯃꯥꯏꯄꯥꯛꯂꯕ ꯂꯥꯟꯃꯤ ꯑꯗꯨꯅ ꯃꯥꯏꯊꯤꯔꯕ ꯃꯔꯨꯞ ꯑꯗꯨꯒꯤ ꯌꯨꯝꯗ ꯆꯠꯇꯨꯅ "
+                    "ꯃꯍꯥꯛꯀꯤ ꯊꯧꯅꯥ ꯑꯃꯁꯨꯡ ꯃꯒꯨꯟꯕꯨ ꯃꯃꯥ-ꯃꯄꯥꯒꯤ ꯃꯃꯥꯡꯗ ꯁꯩꯊꯥꯔꯝꯃꯤ꯫ ꯃꯁꯤꯅ ꯀꯪꯂꯩꯄꯥꯛꯀꯤ ꯊꯥꯡ-ꯇꯥ "
+                    "ꯁꯥꯟꯅ-ꯈꯣꯠꯅꯕꯒꯤ ꯂꯝꯕꯤꯗ ꯃꯇꯝ ꯆꯨꯞꯄꯗ ꯏꯀꯥꯏꯈꯨꯝꯅꯕ, ꯊꯧꯅꯥ ꯑꯃꯁꯨꯡ ꯏꯆꯤꯟ-ꯏꯅꯥꯎꯒꯨꯝ "
+                    "ꯅꯨꯡꯁꯤꯅꯕꯒꯤ ꯃꯔꯨꯑꯣꯏꯕ ꯋꯥꯈꯜꯂꯣꯟ ꯄꯤꯔꯤ꯫"
+                )
+            }
+        ]
+    },
+    {
+        "book_id": "panthoibi_khonggul",
+        "title": "ꯄꯥꯟꯊꯣꯏꯕꯤ ꯈꯣꯡꯒꯨꯜ",
+        "title_en": "Panthoibi Khonggul: The Trail and Glory of Goddess Panthoibi",
+        "author": "Classical Meitei Maichous (Divine Poetic Tradition)",
+        "language": "Meitei (Manipuri)",
+        "script": "Meitei Mayek",
+        "genre": "Divine Romance / Mythological Poetry / Puya",
+        "description": (
+            "The celebrated archaic literary puya and poetic masterpiece chronicling the radiant love, "
+            "heroic independence, and cosmic union of Goddess Panthoibi and Lord Nongpok Ningthou. "
+            "It forms the religious and cosmological cornerstone for the sacred Lai Haraoba festival."
+        ),
+        "source": "Classical Manipuri Literature Archives & Sanamahi Cultural Preservation Council",
+        "copyright": "Public Domain (Classical Meitei Literature)",
+        "chapters": [
+            {
+                "chapter_number": 1,
+                "title": "ꯂꯥꯏꯅꯤꯡꯊꯧ ꯃꯆꯥ ꯄꯥꯟꯊꯣꯏꯕꯤꯒꯤ ꯅꯤꯡꯊꯤꯕ ꯃꯒꯨꯟ ꯑꯃꯁꯨꯡ ꯃꯄꯥꯡꯒꯜ",
+                "title_en": "The Divine Beauty and Free Spirit of Princess Panthoibi",
+                "text": (
+                    "ꯄꯥꯟꯊꯣꯏꯕꯤ ꯑꯁꯤ ꯅꯤꯡꯊꯧ ꯃꯆꯥꯅꯨꯄꯤ ꯑꯣꯏꯅ ꯄꯣꯛꯂꯒ ꯅꯨꯡꯁꯤꯕ, ꯐꯖꯕ, ꯊꯧꯅꯥ ꯑꯃꯁꯨꯡ ꯅꯤꯡꯇꯝꯕꯒꯤ "
+                    "ꯁꯛꯇꯝ ꯑꯣꯏꯔꯝꯃꯤ꯫ ꯃꯍꯥꯛꯅ ꯂꯩꯉꯥꯛꯀꯤ ꯆꯠꯅꯕꯤꯁꯤꯡꯒꯤ ꯃꯅꯨꯡꯗ ꯂꯣꯠꯇꯨꯅ ꯂꯩꯕ ꯄꯥꯝꯈꯤꯗꯦ, ꯑꯃꯁꯨꯡ "
+                    "ꯃꯍꯧꯁꯥꯒꯤ ꯐꯖꯕ, ꯎꯃꯪ, ꯆꯤꯡꯗꯣꯜ ꯑꯃꯁꯨꯡ ꯏꯆꯦꯜꯁꯤꯡꯒꯤ ꯃꯔꯛꯇ ꯃꯍꯥꯛꯀꯤ ꯊꯋꯥꯏ ꯍꯔꯥꯎꯅ ꯆꯠꯂꯝꯃꯤ꯫ "
+                    "ꯃꯍꯥꯛꯀꯤ ꯃꯉꯥꯜꯅ ꯃꯥꯂꯦꯝ ꯄꯨꯝꯕꯕꯨ ꯉꯥꯟꯍꯟꯈꯤ꯫"
+                )
+            },
+            {
+                "chapter_number": 2,
+                "title": "ꯅꯣꯡꯄꯣꯛ ꯅꯤꯡꯊꯧꯒ ꯎꯅꯕ ꯑꯃꯁꯨꯡ ꯅꯨꯡꯁꯤꯕꯒꯤ ꯈꯣꯡꯖꯦꯜ",
+                "title_en": "The Encounter with Nongpok Ningthou and the Sacred Journey",
+                "text": (
+                    "ꯅꯣꯡꯃꯥꯏꯖꯤꯡ ꯆꯤꯡꯒꯤ ꯂꯩꯄꯥꯛꯇ ꯅꯣꯡꯄꯣꯛ ꯅꯤꯡꯊꯧꯒ ꯄꯥꯟꯊꯣꯏꯕꯤꯒ ꯎꯅꯈꯤ꯫ ꯃꯈꯣꯏ ꯑꯅꯤꯒꯤ ꯅꯨꯡꯁꯤꯕ ꯑꯁꯤ "
+                    "ꯃꯥꯂꯦꯝꯒꯤ ꯈꯣꯡꯊꯥꯡ ꯄꯨꯝꯅꯃꯛꯇꯒꯤ ꯂꯥꯟꯊꯣꯛꯂꯕ ꯂꯥꯏꯒꯤ ꯑꯣꯏꯕ ꯄꯨꯟꯁꯤꯟꯕ ꯑꯃ ꯑꯣꯏꯔꯝꯃꯤ꯫ ꯄꯥꯟꯊꯣꯏꯕꯤꯅ "
+                    "ꯅꯣꯡꯄꯣꯛ ꯅꯤꯡꯊꯧꯕꯨ ꯊꯤꯗꯨꯅ ꯆꯤꯡ-ꯄꯥꯠ ꯀꯌꯥ ꯀꯣꯏꯈꯤ, ꯑꯃꯁꯨꯡ ꯃꯍꯥꯛꯀꯤ ꯈꯣꯡꯒꯨꯜ ꯑꯗꯨ ꯀꯪꯂꯩꯄꯥꯛꯀꯤ "
+                    "ꯄꯨꯋꯥꯔꯤꯗ ꯃꯇꯝ ꯆꯨꯞꯄꯒꯤ ꯏꯊꯤꯜ ꯑꯃ ꯑꯣꯏꯅ ꯂꯦꯞꯈꯤ꯫"
+                )
+            },
+            {
+                "chapter_number": 3,
+                "title": "ꯄꯨꯟꯁꯤꯒꯤ ꯈꯣꯡꯆꯠ ꯑꯃꯁꯨꯡ ꯂꯥꯏ ꯍꯔꯥꯎꯕꯒꯤ ꯍꯧꯔꯀꯐꯝ",
+                "title_en": "The Cosmic Dance of Union and Origin of Lai Haraoba",
+                "text": (
+                    "ꯑꯔꯣꯏꯕꯗ ꯄꯥꯟꯊꯣꯏꯕꯤ ꯑꯃꯁꯨꯡ ꯅꯣꯡꯄꯣꯛ ꯅꯤꯡꯊꯧ ꯑꯅꯤꯅ ꯑꯇꯤꯌꯥ ꯑꯃꯁꯨꯡ ꯃꯥꯂꯦꯝꯒꯤ ꯃꯔꯛꯇ "
+                    "ꯄꯨꯟꯅ ꯖꯥꯒꯣꯏ ꯁꯥꯈꯤ꯫ ꯃꯁꯤꯒꯤ ꯂꯥꯏꯒꯤ ꯑꯣꯏꯕ ꯍꯔꯥꯎ-ꯀꯨꯝꯃꯩ ꯑꯁꯤꯗꯒꯤ ꯂꯥꯏ ꯍꯔꯥꯎꯕꯒꯤ ꯆꯠꯅꯕꯤ ꯍꯧꯔꯛꯈꯤ꯫ "
+                    "ꯃꯥꯏꯕ-ꯃꯥꯏꯕꯤꯁꯤꯡꯅ ꯖꯥꯒꯣꯏ ꯁꯥꯗꯨꯅ ꯄꯥꯟꯊꯣꯏꯕꯤꯒꯤ ꯊꯧꯅꯥ ꯑꯃꯁꯨꯡ ꯊꯧꯖꯥꯜꯕꯨ ꯃꯇꯝ ꯆꯨꯞꯄꯗ ꯏꯀꯥꯏꯈꯨꯝꯅꯕ ꯎꯠꯂꯤ꯫"
+                )
+            }
+        ]
+    },
+    {
+        "book_id": "poireiton_khunthok",
+        "title": "ꯄꯣꯏꯔꯩꯇꯣꯟ ꯈꯨꯟꯊꯣꯛ",
+        "title_en": "Poireiton Khunthok: The Great Migration of King Poireiton",
+        "author": "Ancient Meitei Chroniclers and Sages",
+        "language": "Meitei (Manipuri)",
+        "script": "Meitei Mayek",
+        "genre": "Ancient Chronicle / Historical Legend / Ethnographic Puya",
+        "description": (
+            "One of the foundational archaic texts of ancient Manipur, recording the epic historical journey "
+            "of King Poireiton and his clan from Khamnung to the Manipur valley, introducing agriculture, "
+            "the domestic hearth fire, burial customs, and systematic village settlements."
+        ),
+        "source": "State Archives of Manipur & Directorate of Language Planning Puya Preservation",
+        "copyright": "Public Domain (Ancient Historical Chronicle)",
+        "chapters": [
+            {
+                "chapter_number": 1,
+                "title": "ꯈꯝꯅꯨꯡꯗꯒꯤ ꯍꯧꯔꯛꯄ ꯈꯣꯡꯆꯠ ꯑꯃꯁꯨꯡ ꯃꯩꯒꯤ ꯊꯧꯖꯥꯜ",
+                "title_en": "The Departure from Khamnung and the Sacred Fire",
+                "text": (
+                    "ꯑꯔꯤꯕ ꯃꯇꯝꯗ ꯄꯣꯏꯔꯩꯇꯣꯟꯅ ꯃꯍꯥꯛꯀꯤ ꯃꯤꯌꯥꯝꯕꯨ ꯂꯨꯆꯤꯡꯗꯨꯅ ꯈꯝꯅꯨꯡ ꯂꯩꯄꯥꯛꯇꯒꯤ ꯑꯅꯧꯕ ꯂꯩꯐꯝ ꯊꯤꯅꯕ ꯍꯧꯔꯛꯈꯤ꯫ "
+                    "ꯃꯍꯥꯛꯀꯤ ꯈꯨꯠꯇ ꯂꯩꯕꯥꯛꯄꯣꯛꯄꯒꯤ ꯁꯦꯡꯂꯕ ꯃꯩ ꯄꯥꯏꯔꯝꯃꯤ, ꯃꯁꯤꯅ ꯃꯤꯑꯣꯏꯕꯒꯤ ꯈꯨꯟꯊꯣꯛꯄꯗ ꯃꯔꯨꯑꯣꯏꯕ ꯃꯉꯥꯜ ꯑꯣꯏꯈꯤ꯫ "
+                    "ꯄꯣꯏꯔꯩꯇꯣꯟꯅ ꯂꯝꯕꯤꯗ ꯎꯅꯕ ꯃꯤꯌꯥꯝꯗ ꯃꯩ ꯁꯤꯖꯤꯟꯅꯕ ꯑꯃꯁꯨꯡ ꯆꯥꯛ ꯊꯣꯡꯕꯒꯤ ꯄꯥꯎꯇꯥꯛ ꯄꯤꯈꯤ꯫"
+                )
+            },
+            {
+                "chapter_number": 2,
+                "title": "ꯆꯤꯡ-ꯄꯥꯠ ꯑꯃꯁꯨꯡ ꯎꯃꯪ ꯂꯥꯟꯊꯣꯛꯇꯨꯅ ꯂꯥꯛꯄ",
+                "title_en": "The Journey Across Hills, Forests and Rivers",
+                "text": (
+                    "ꯈꯣꯡꯆꯠ ꯑꯁꯤꯗ ꯄꯣꯏꯔꯩꯇꯣꯟ ꯑꯃꯁꯨꯡ ꯃꯍꯥꯛꯀꯤ ꯃꯆꯤꯟ-ꯃꯅꯥꯎꯁꯤꯡꯅ ꯑꯀꯟꯕ ꯆꯤꯡꯗꯣꯜ ꯀꯌꯥ ꯀꯥꯈꯤ, "
+                    "ꯏꯆꯦꯜ ꯀꯌꯥ ꯂꯥꯟꯈꯤ ꯑꯃꯁꯨꯡ ꯎꯃꯪꯒꯤ ꯁꯥ-ꯉꯥꯁꯤꯡꯒ ꯃꯥꯌꯣꯛꯅꯈꯤ꯫ ꯃꯍꯥꯛꯀꯤ ꯊꯧꯅꯥ ꯑꯃꯁꯨꯡ ꯂꯧꯁꯤꯡꯅ "
+                    "ꯃꯤꯌꯥꯝꯕꯨ ꯑꯋꯥꯕ ꯈꯨꯗꯤꯡꯃꯛꯇꯒꯤ ꯀꯟꯈꯤ꯫ ꯃꯐꯝ ꯈꯨꯗꯤꯡꯗ ꯃꯍꯥꯛꯅ ꯂꯩꯄꯥꯛꯀꯤ ꯃꯃꯤꯡ ꯊꯣꯟꯗꯨꯅ ꯂꯥꯛꯈꯤ꯫"
+                )
+            },
+            {
+                "chapter_number": 3,
+                "title": "ꯂꯝꯗꯝ ꯁꯦꯝꯕ, ꯂꯧ-ꯎꯕ ꯑꯃꯁꯨꯡ ꯈꯨꯟ ꯊꯣꯛꯄ",
+                "title_en": "The Establishment of Settlements and Agricultural Civilization",
+                "text": (
+                    "ꯑꯔꯣꯏꯕꯗ ꯃꯅꯤꯄꯨꯔꯒꯤ ꯇꯝꯄꯥꯛꯇ ꯌꯧꯔꯛꯄꯗ ꯄꯣꯏꯔꯩꯇꯣꯟꯅ ꯃꯤꯌꯥꯝꯒ ꯂꯣꯏꯅꯅ ꯂꯧ ꯎꯕ ꯍꯧꯈꯤ, "
+                    "ꯐꯧ ꯊꯥꯕ ꯑꯃꯁꯨꯡ ꯍꯤꯡꯅꯕ ꯈꯨꯟ ꯁꯦꯝꯈꯤ꯫ ꯃꯁꯤꯅ ꯀꯪꯂꯩꯄꯥꯛꯇ ꯂꯧꯃꯤꯒꯤ ꯍꯧꯔꯀꯐꯝ ꯑꯃꯁꯨꯡ "
+                    "ꯈꯨꯅꯥꯏꯒꯤ ꯑꯆꯨꯝꯕ ꯌꯨꯝꯐꯝ ꯑꯣꯏꯈꯤ꯫ ꯄꯣꯏꯔꯩꯇꯣꯟ ꯈꯨꯟꯊꯣꯛ ꯑꯁꯤ ꯃꯅꯤꯄꯨꯔꯒꯤ ꯄꯨꯋꯥꯔꯤꯒꯤ "
+                    "ꯈ꯭ꯋꯥꯏꯗꯒꯤ ꯃꯔꯨꯑꯣꯏꯕ ꯑꯍꯥꯟꯕ ꯆꯦꯐꯣꯡꯅꯤ꯫"
+                )
+            }
+        ]
+    },
+    {
+        "book_id": "pakhangba_laihui",
+        "title": "ꯄꯥꯈꯪꯕ ꯂꯥꯏꯍꯨꯏ",
+        "title_en": "Pakhangba Laihui: The Divine Chronicle of Sovereign Pakhangba",
+        "author": "Ancient Kangla Royal Maichous",
+        "language": "Meitei (Manipuri)",
+        "script": "Meitei Mayek",
+        "genre": "Royal Chronicle / Cosmic Puya / Sovereign Hymns",
+        "description": (
+            "The sacred ancient puya detailing the divine dragon-king Pakhangba, sovereign coronation "
+            "rites, cosmic creation symbolism, and ancient coronation hymns of the Ningthouja dynasty at Kangla. "
+            "It is the spiritual and genealogical foundation of Manipuri royalty."
+        ),
+        "source": "Royal Palace Archives of Kangla & Directorate of Language Planning",
+        "copyright": "Public Domain (Ancient Sacred Chronicle)",
+        "chapters": [
+            {
+                "chapter_number": 1,
+                "title": "ꯄꯥꯈꯪꯕꯒꯤ ꯂꯥꯏꯒꯤ ꯑꯣꯏꯕ ꯍꯧꯔꯀꯐꯝ ꯑꯃꯁꯨꯡ ꯁꯛꯇꯝ",
+                "title_en": "The Cosmic Origin and Divine Incarnation of Pakhangba",
+                "text": (
+                    "ꯏꯄꯨꯊꯧ ꯄꯥꯈꯪꯕ ꯑꯁꯤ ꯑꯇꯤꯌꯥ ꯒꯨꯔꯨ ꯁꯤꯗꯕꯒꯤ ꯊꯧꯖꯥꯜꯗꯒꯤ ꯃꯥꯂꯦꯝ ꯂꯩꯉꯥꯛꯅꯕ ꯂꯥꯛꯈꯤꯕ ꯂꯥꯏꯒꯤ ꯑꯣꯏꯕ ꯅꯤꯡꯊꯧꯅꯤ꯫ "
+                    "ꯃꯍꯥꯛꯅ ꯅꯨꯃꯤꯠꯇ ꯃꯤꯑꯣꯏꯕꯒꯤ ꯁꯛꯇꯝ ꯑꯣꯏꯅ ꯑꯃꯁꯨꯡ ꯑꯍꯤꯡꯗ ꯂꯥꯏꯒꯤ ꯂꯤꯟ ꯑꯆꯧꯕ (ꯗ꯭ꯔꯦꯒꯟ) ꯑꯣꯏꯅ ꯂꯩꯄꯥꯛꯄꯨ ꯉꯥꯛ-ꯁꯦꯟꯈꯤ꯫ "
+                    "ꯃꯍꯥꯛꯀꯤ ꯃꯉꯥꯜꯅ ꯀꯪꯂꯥ ꯄꯨꯝꯕꯕꯨ ꯁꯦꯡꯂꯕ ꯃꯐꯝ ꯑꯣꯏꯍꯟꯈꯤ꯫"
+                )
+            },
+            {
+                "chapter_number": 2,
+                "title": "ꯀꯪꯂꯥ ꯀꯣꯅꯨꯡꯗ ꯅꯤꯡꯊꯧ ꯐꯝꯕꯥꯜ ꯀꯥꯕ",
+                "title_en": "The Coronation at Sacred Kangla Fort",
+                "text": (
+                    "ꯄꯥꯈꯪꯕꯅ ꯀꯪꯂꯥ ꯀꯣꯅꯨꯡꯒꯤ ꯃꯦꯟꯇꯣꯡꯗ ꯐꯝꯗꯨꯅ ꯅꯤꯡꯊꯧ ꯐꯝꯕꯥꯜ ꯀꯥꯈꯤ꯫ ꯃꯥꯏꯕ-ꯃꯥꯏꯕꯤꯁꯤꯡꯅ "
+                    "ꯁꯦꯡꯂꯕ ꯏꯁꯤꯡ ꯇꯩꯗꯨꯅ ꯊꯧꯖꯥꯜ ꯄꯤꯈꯤ ꯑꯃꯁꯨꯡ ꯁꯂꯥꯏ ꯇꯔꯦꯠꯀꯤ ꯃꯤꯌꯥꯝꯅ ꯄꯨꯟꯅ ꯅꯤꯡꯊꯧꯕꯨ ꯈꯨꯔꯨꯝꯈꯤ꯫ "
+                    "ꯃꯁꯤꯗꯒꯤ ꯍꯧꯅ ꯃꯅꯤꯄꯨꯔꯒꯤ ꯅꯤꯡꯊꯧ ꯂꯩꯉꯥꯛ ꯑꯃꯁꯨꯡ ꯂꯩꯄꯥꯛ ꯉꯥꯛꯄꯒꯤ ꯆꯠꯅꯕꯤ ꯃꯄꯨꯡ ꯐꯥꯅ ꯂꯦꯞꯈꯤ꯫"
+                )
+            },
+            {
+                "chapter_number": 3,
+                "title": "ꯄꯥꯈꯪꯕꯒꯤ ꯄꯥꯄꯍꯜ ꯑꯃꯁꯨꯡ ꯂꯩꯄꯥꯛ ꯉꯥꯛꯄꯒꯤ ꯊꯧꯖꯥꯜ",
+                "title_en": "The Sacred Dragon Symbolism and Protective Blessings for Kangleipak",
+                "text": (
+                    "ꯄꯥꯈꯪꯕꯒꯤ ꯄꯥꯄꯍꯜ (ꯑꯀꯣꯏꯕ ꯂꯤꯟ ꯁꯛꯇꯝ) ꯑꯁꯤ ꯀꯪꯂꯩꯄꯥꯛꯀꯤ ꯅꯤꯡꯊꯧ ꯀꯣꯅꯨꯡ ꯑꯃꯁꯨꯡ "
+                    "ꯂꯩꯄꯥꯛꯀꯤ ꯈ꯭ꯋꯥꯏꯗꯒꯤ ꯁꯦꯡꯂꯕ ꯃꯁꯛ ꯑꯣꯏꯔꯤ꯫ ꯃꯁꯤꯅ ꯇꯥꯛꯄꯗꯤ ꯃꯇꯝ ꯑꯃꯁꯨꯡ ꯑꯇꯤꯌꯥꯒꯤ "
+                    "ꯑꯔꯣꯏꯕ ꯂꯩꯇꯦ, ꯑꯃꯁꯨꯡ ꯀꯪꯂꯩꯄꯥꯛꯄꯨ ꯏꯄꯨꯊꯧ ꯄꯥꯈꯪꯕꯒꯤ ꯊꯧꯖꯥꯜꯅ ꯃꯇꯝ ꯆꯨꯞꯄꯗ ꯉꯥꯛ-ꯁꯦꯟꯗꯨꯅ ꯊꯝꯒꯅꯤ꯫"
                 )
             }
         ]

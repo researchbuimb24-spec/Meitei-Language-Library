@@ -21,15 +21,15 @@ from meitei_lang.exceptions import WordNotFoundError
 
 
 def test_vocabulary_count():
-    # Requirement: At least 50,000 unique verified entries
+    # Requirement: At least 150,000 unique verified entries (1.5 lakh words)
     total = count_words()
-    assert total >= 50000, f"Expected at least 50,000 words, got {total}"
+    assert total >= 150000, f"Expected at least 150,000 words, got {total}"
     assert get_vocabulary_count() == total
 
 
 def test_word_entry_structure():
     entries = load_vocabulary()
-    assert len(entries) >= 50000
+    assert len(entries) >= 150000
     entry = entries[0]
     assert isinstance(entry, WordEntry)
     assert entry.word

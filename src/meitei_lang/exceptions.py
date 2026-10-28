@@ -26,6 +26,11 @@ class SongNotFoundError(MeiteiLangError):
     pass
 
 
+class SentenceNotFoundError(MeiteiLangError):
+    """Raised when a requested sentence record is not found."""
+    pass
+
+
 class LyricsNotAvailableError(MeiteiLangError):
     """Raised when lyrics are requested for a song where lyrics cannot be provided."""
     pass

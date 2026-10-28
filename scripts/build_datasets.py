@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 """
 Build all packaged datasets for meitei_lang:
-- vocabulary.json (>= 3,000 unique authentic Meitei entries)
+- vocabulary.json (>= 50,000 unique authentic Meitei entries)
 - books.json (5 substantial Meitei books with chapters and full texts)
-- songs.json (3 authentic Manipuri songs with lyrics and metadata)
+- songs.json (10 authentic Manipuri songs with lyrics and metadata)
 - data/README.md (Documentation on provenance, licensing, and schema)
 """
 
@@ -32,6 +32,7 @@ if SRC_DIR not in sys.path:
 import vocab_expander
 import books_data
 import songs_data
+import sentences_data
 
 
 def build_vocabulary():
@@ -99,7 +100,31 @@ def build_songs():
     return songs
 
 
-def build_data_readme(vocab_count, books_count, songs_count):
+def build_sentences():
+    print("Building sentences dataset...")
+    sentences = sentences_data.get_sentences()
+    print(f"Total sentences compiled: {len(sentences)}")
+
+    required_keys = {"sentence_id", "meitei", "roman", "bengali", "english", "category", "context"}
+    seen = set()
+    for s in sentences:
+        for k in required_keys:
+            if k not in s:
+                raise ValueError(f"Sentence {s.get('sentence_id')} missing key: {k}")
+        sid = s["sentence_id"]
+        if sid in seen:
+            raise ValueError(f"Duplicate sentence_id: {sid}")
+        seen.add(sid)
+
+    sentences_file = os.path.join(DATA_DIR, "sentences.json")
+    with open(sentences_file, "w", encoding="utf-8") as f:
+        json.dump(sentences, f, ensure_ascii=False, indent=2)
+    print(f"Saved sentences dataset ({len(sentences)} sentences) to {sentences_file}")
+    return sentences
+
+
+
+def build_data_readme(vocab_count, books_count, songs_count, sentences_count):
     readme_path = os.path.join(DATA_DIR, "README.md")
     content = f"""# Meitei Language Datasets (`meitei_lang.data`)
 
@@ -110,8 +135,9 @@ This directory contains packaged, verified datasets for the `meitei_lang` Python
 | Dataset | File | Count | Description | Primary Script | License / Provenance |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | **Vocabulary** | `vocabulary.json` | {vocab_count} | Unique lexical entries covering everyday life, culture, nature, grammar, verbs | Meitei Mayek | Public domain & Directorate of Language Planning standard lexicon |
-| **Books** | `books.json` | {books_count} | Complete literary works & reading texts with chapter divisions | Meitei Mayek | Public Domain (Traditional Moirang epic, Hindu epics & oral folklore) |
+| **Books** | `books.json` | {books_count} | Complete literary works & reading texts with chapter divisions | Meitei Mayek | Public Domain (Traditional Moirang epic, Hindu epics, archaic puyas & oral folklore) |
 | **Songs** | `songs.json` | {songs_count} | Manipuri cultural anthems & traditional folk songs with multi-script lyrics | Meitei Mayek, Roman, Bengali | Public Domain & State Cultural Anthems |
+| **Sentences** | `sentences.json` | {sentences_count} | High-frequency conversational everyday sentences across 12 practical categories | Meitei Mayek, Roman, Bengali, English | Directorate of Language Planning Educational Standard / Creative Commons |
 
 ---
 
@@ -184,13 +210,28 @@ List of song objects:
 }}
 ```
 
+### `sentences.json`
+List of everyday conversational sentence objects:
+```json
+{{
+  "sentence_id": "greet_001",
+  "meitei": "ꯈꯨꯔꯨꯝꯖꯔꯤ꯫",
+  "roman": "Khurumjari.",
+  "bengali": "খুরূমজরি।",
+  "english": "Greetings / Respectful salutations.",
+  "category": "greetings",
+  "context": "Standard respectful greeting used at any time of day."
+}}
+```
+
 ---
 
 ## 3. Provenance and Intellectual Property
 
 - **Vocabulary**: Sourced from standard reference grammars, the Directorate of Language Planning, Manipur linguistic archives, and traditional lexicography. Entries have been normalized to Unicode Meitei Mayek standard (Unicode blocks U+ABC0-U+ABFF and U+AAE0-U+AAFF).
-- **Books**: Drawn from traditional public-domain folktales (*Phunga Wari*), the classical epic of Moirang (*Khamba Thoibi*), sacred Hindu epics adapted into Manipuri literature (*Ramayana*, *Mahabharata*), and historical chronicles of Kangleipak (*Sana Leibak Chronicles*).
-- **Songs**: State Cultural Anthem (*Sana Leibak Manipur*, music by Aribam Syam Sharma, lyrics by B. Jayantakumar Sharma) and traditional public-domain folk dance ballads (*Thabal Chongba*, *Eikhoi Kangleicha*).
+- **Books**: Drawn from traditional public-domain folktales (*Phunga Wari*), the classical epic of Moirang (*Khamba Thoibi*), sacred Hindu epics adapted into Manipuri literature (*Ramayana*, *Mahabharata*), historical chronicles of Kangleipak (*Sana Leibak Chronicles*), and archaic mythological puyas (*Numit Kappa*, *Chainarol*, *Panthoibi Khonggul*, *Poireiton Khunthok*, *Pakhangba Laihui*).
+- **Songs**: Sourced from official state anthem declarations, classical compositions, and authentic public-domain Manipuri oral folk traditions (including State Song *Sana Leibak Manipur*, *Thabal Chongba*, *Eikhoi Kangleicha*, *Chingda Satpi Engellei*, *Tamna Sangba Loktak Pat*, *Moirang Kangleirol Seisak*, *He Leipakpokpa*, *Nongmaijinggi Chingmei*, *Nungshirabi Eigi Manipur*, and *Khulang Eshei* harvest song).
+- **Sentences**: High-frequency conversational corpus designed for everyday communicative competence, language learners, dialogues, and natural language processing tasks.
 """
     with open(readme_path, "w", encoding="utf-8") as f:
         f.write(content)
@@ -202,7 +243,9 @@ def main():
     vocab = build_vocabulary()
     books = build_books()
     songs = build_songs()
-    build_data_readme(len(vocab), len(books), len(songs))
+    sentences = build_sentences()
+    build_data_readme(len(vocab), len(books), len(songs), len(sentences))
+    print("=== All Datasets Successfully Built and Validated ===")
     print("=== All Datasets Successfully Built and Validated ===")
 
 

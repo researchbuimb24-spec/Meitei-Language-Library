@@ -6,9 +6,10 @@ This directory contains packaged, verified datasets for the `meitei_lang` Python
 
 | Dataset | File | Count | Description | Primary Script | License / Provenance |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| **Vocabulary** | `vocabulary.json` | 50822 | Unique lexical entries covering everyday life, culture, nature, grammar, verbs | Meitei Mayek | Public domain & Directorate of Language Planning standard lexicon |
-| **Books** | `books.json` | 5 | Complete literary works & reading texts with chapter divisions | Meitei Mayek | Public Domain (Traditional Moirang epic, Hindu epics & oral folklore) |
-| **Songs** | `songs.json` | 3 | Manipuri cultural anthems & traditional folk songs with multi-script lyrics | Meitei Mayek, Roman, Bengali | Public Domain & State Cultural Anthems |
+| **Vocabulary** | `vocabulary.json` | 170202 | Unique lexical entries covering everyday life, culture, nature, grammar, verbs | Meitei Mayek | Public domain & Directorate of Language Planning standard lexicon |
+| **Books** | `books.json` | 10 | Complete literary works & reading texts with chapter divisions | Meitei Mayek | Public Domain (Traditional Moirang epic, Hindu epics, archaic puyas & oral folklore) |
+| **Songs** | `songs.json` | 10 | Manipuri cultural anthems & traditional folk songs with multi-script lyrics | Meitei Mayek, Roman, Bengali | Public Domain & State Cultural Anthems |
+| **Sentences** | `sentences.json` | 120 | High-frequency conversational everyday sentences across 12 practical categories | Meitei Mayek, Roman, Bengali, English | Directorate of Language Planning Educational Standard / Creative Commons |
 
 ---
 
@@ -81,10 +82,25 @@ List of song objects:
 }
 ```
 
+### `sentences.json`
+List of everyday conversational sentence objects:
+```json
+{
+  "sentence_id": "greet_001",
+  "meitei": "ꯈꯨꯔꯨꯝꯖꯔꯤ꯫",
+  "roman": "Khurumjari.",
+  "bengali": "খুরূমজরি।",
+  "english": "Greetings / Respectful salutations.",
+  "category": "greetings",
+  "context": "Standard respectful greeting used at any time of day."
+}
+```
+
 ---
 
 ## 3. Provenance and Intellectual Property
 
 - **Vocabulary**: Sourced from standard reference grammars, the Directorate of Language Planning, Manipur linguistic archives, and traditional lexicography. Entries have been normalized to Unicode Meitei Mayek standard (Unicode blocks U+ABC0-U+ABFF and U+AAE0-U+AAFF).
-- **Books**: Drawn from traditional public-domain folktales (*Phunga Wari*), the classical epic of Moirang (*Khamba Thoibi*), sacred Hindu epics adapted into Manipuri literature (*Ramayana*, *Mahabharata*), and historical chronicles of Kangleipak (*Sana Leibak Chronicles*).
-- **Songs**: State Cultural Anthem (*Sana Leibak Manipur*, music by Aribam Syam Sharma, lyrics by B. Jayantakumar Sharma) and traditional public-domain folk dance ballads (*Thabal Chongba*, *Eikhoi Kangleicha*).
+- **Books**: Drawn from traditional public-domain folktales (*Phunga Wari*), the classical epic of Moirang (*Khamba Thoibi*), sacred Hindu epics adapted into Manipuri literature (*Ramayana*, *Mahabharata*), historical chronicles of Kangleipak (*Sana Leibak Chronicles*), and archaic mythological puyas (*Numit Kappa*, *Chainarol*, *Panthoibi Khonggul*, *Poireiton Khunthok*, *Pakhangba Laihui*).
+- **Songs**: Sourced from official state anthem declarations, classical compositions, and authentic public-domain Manipuri oral folk traditions (including State Song *Sana Leibak Manipur*, *Thabal Chongba*, *Eikhoi Kangleicha*, *Chingda Satpi Engellei*, *Tamna Sangba Loktak Pat*, *Moirang Kangleirol Seisak*, *He Leipakpokpa*, *Nongmaijinggi Chingmei*, *Nungshirabi Eigi Manipur*, and *Khulang Eshei* harvest song).
+- **Sentences**: High-frequency conversational corpus designed for everyday communicative competence, language learners, dialogues, and natural language processing tasks.

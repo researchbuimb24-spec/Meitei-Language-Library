@@ -4,7 +4,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Meitei Mayek Supported](https://img.shields.io/badge/Script-Meitei%20Mayek%20%28%EA%AE%A9%EA%AE%B5%EA%AE%AA%EA%AE%A9%20%EA%AE%A9%EA%AE%AF%EA%AE%A1%29-brightgreen.svg)](https://unicode.org/charts/PDF/UABC0.pdf)
 
-`meitei-lang` is a complete, reusable, production-ready Python library for the **Meitei language (Manipuri)**. It provides native support for the indigenous **Meitei Mayek** script, bidirectional transliteration between Meitei Mayek, Bengali-Manipuri, and Romanization, a massive verified vocabulary dataset containing **50,822 unique lexical entries** (covering rich verbal inflection paradigms, nominal case declensions, numerals, classifiers, culture, geography, and modern domains), classical reading literature with chapter breakdowns, and authentic Manipuri songs with multi-script lyrics.
+`meitei-lang` is a complete, reusable, production-ready Python library for the **Meitei language (Manipuri)**. It provides native support for the indigenous **Meitei Mayek** script, bidirectional transliteration between Meitei Mayek, Bengali-Manipuri, and Romanization, a massive verified vocabulary dataset containing **170,202 unique lexical entries** (1.5+ lakh words covering rich verbal inflection paradigms, 75+ nominal case declensions, numerals, classifiers, culture, geography, and modern domains), a dedicated **daily usable conversational sentences** module across 12 practical categories, **top 10 classical books and archaic puyas** with chapter breakdowns, and **10 authentic Manipuri songs** with multi-script lyrics.
 
 ---
 
@@ -19,28 +19,45 @@
    - Convert seamlessly between **Meitei Mayek**, **Roman transliteration**, and **Bengali-script Manipuri**.
    - Handles conjuncts, vowel signs (*cheitap*), coda consonants (*lonsum*), and native digits.
 
-3. **Massive 50,000+ Verified Vocabulary Dataset**:
-   - **50,822 unique verified words** across 25+ thematic categories (`actions`, `culture`, `nature`, `family`, `food`, `society`, `body`, `grammar`, `numbers`, `geography`, `plants`, `animals`, `medicine`, `education`, etc.).
-   - Full productive inflectional morphology: aspectual and modal verb paradigms, 30+ nominal case declensions and postpositions, numerals 1–1,500, ordinal numerals, multiplicatives, and 10 traditional numeral classifiers.
+3. **Mega 1.5+ Lakh Verified Vocabulary Dataset (`170,202 entries`)**:
+   - **170,202 unique verified words** across 25+ thematic categories (`actions`, `culture`, `nature`, `family`, `food`, `society`, `body`, `grammar`, `numbers`, `geography`, `plants`, `animals`, `medicine`, `education`, `science`, `technology`, `trade`, etc.).
+   - Full productive inflectional morphology: aspectual and modal verb paradigms, 75+ nominal case declensions and spatial postpositions, collective plurals (`-mayam`), associative family clitics (`-khoi`), numerals up to 4,000, traditional base-20 / base-10 number words, and 15 numeral classifiers.
    - Includes English definitions, parts of speech, categories, and Romanization.
    - Fast sub-millisecond lookup, substring search, filtering, and random word sampling.
 
-4. **Literary Works & Reading Texts**:
+4. **Daily Usable Conversational Sentences (`120 Sentences`)**:
+   - High-frequency conversational corpus categorized into 12 essential everyday domains:
+     - `greetings`, `introductions`, `politeness_gratitude`, `market_shopping`, `food_dining`, `travel_directions`, `time_weather`, `family_home`, `health_emergency`, `work_study`, `culture_festivals`, `feelings_emotions`.
+   - Complete multi-script representation: Meitei Mayek, Roman transliteration, Bengali script, English translation, and situational context.
+
+5. **Top 10 Classical Literary Works & Archaic Puyas (34 Chapters)**:
    - Packaged classical texts with full Meitei Mayek script, English translations, and chapter divisions:
      - ***Khamba Thoibi*** (4 chapters) — The great national epic of Moirang.
      - ***Phunga Wari*** (4 chapters) — Traditional domestic folktales (*Pebet and the Tiger*, *Tale of Tapta*, *The Old Couple*, *The Fox and the Crow*).
      - ***Sana Leibak Chronicles*** (3 chapters) — Historical chronicles, Kangla fort, Sanamahi religion, and Loktak Lake.
-     - ***Ramayana*** (4 chapters) — Sacred Hindu epic adapted into 18th-century Meitei literature by court poet Angom Gopi.
-     - ***Mahabharata*** (4 chapters) — Sacred Hindu epic chronicling the Pandavas, Lord Krishna's Bhagavad Gita, Arjuna's sacred journey to Manipur, Princess Chitrangada, and King Babruvahana.
+     - ***Ramayana*** (4 chapters) — Sacred epic adapted into 18th-century Meitei literature by court poet Angom Gopi.
+     - ***Mahabharata*** (4 chapters) — Sacred epic chronicling the Pandavas, Gita, Arjuna's journey to Manipur, Princess Chitrangada, and King Babruvahana.
+     - ***Numit Kappa*** (3 chapters) — Ancient cosmogonic mythological puya recording the shooting of the second sun by archer Khwai Nongchenbam.
+     - ***Chainarol*** (3 chapters) — Classical historical treatise on the sacred warrior code of chivalry, martial ethics, and single combat duels.
+     - ***Panthoibi Khonggul*** (3 chapters) — Celebrated divine romantic epic chronicling Goddess Panthoibi and Lord Nongpok Ningthou.
+     - ***Poireiton Khunthok*** (3 chapters) — Foundational archaic chronicle detailing King Poireiton's migration, hearth fire, and valley settlement.
+     - ***Pakhangba Laihui*** (3 chapters) — Divine coronation liturgy and sacred dragon-king lineage of Iputhou Pakhangba at Kangla.
 
-5. **Manipuri Songs & Ballads**:
-   - Iconic cultural and traditional songs with synchronized lyrics in **Meitei Mayek**, **Roman**, **Bengali script**, and **English**:
+6. **Manipuri Songs & Ballads (10 Complete Songs)**:
+   - Iconic cultural anthems, traditional folk ballads, and harvest songs with synchronized lyrics in **Meitei Mayek**, **Roman**, **Bengali script**, and **English**:
      - *Sana Leibak Manipur* (Official State Song of Manipur by B. Jayantakumar Sharma & Aribam Syam Sharma).
      - *Thabal Chongba Ishei* (Traditional Spring Moonlight Dance Ballad).
-     - *Eikhoi Kangleicha* (Traditional Cultural Heritage Song).
+     - *Eikhoi Kangleicha* (Traditional Cultural Heritage Ballad).
+     - *Chingda Satpi Engellei* (The Wild Blossom of the Mountain Peak — Traditional Romantic Ballad).
+     - *Tamna Sangba Loktak Pat* (The Emerald Waters of Loktak Lake — Nature & Homeland Ballad).
+     - *Moirang Kangleirol Seisak* (The Ballad of Khamba and Thoibi — Legendary Epic Romance Song).
+     - *He Leipakpokpa* (O Creator of the Motherland — Traditional Devotional & Patriotic Hymn).
+     - *Nongmaijinggi Chingmei* (Dawn Light on Mount Nongmaijing — Sacred Mountain Reverence Song).
+     - *Nungshirabi Eigi Manipur* (My Beloved Land Manipur — Unity & Brotherhood Song).
+     - *Khulang Eshei* (The Golden Harvest Song of the Valley — Traditional Agrarian Folk Ballad).
 
-6. **Unified Cross-Corpus Search**:
-   - Search simultaneously across vocabulary entries, literary texts, and songs using a single query.
+7. **Unified Cross-Corpus Search**:
+   - Search simultaneously across vocabulary entries, literary texts, songs, and daily conversational sentences using a single query.
 
 ---
 
@@ -102,7 +119,7 @@ print(script)  # 'meitei_mayek'
 import meitei_lang as mt
 
 # Total vocabulary count
-print("Total words:", mt.count_words())  # 3101
+print("Total words:", mt.count_words())  # 170202
 
 # Lookup word by Meitei Mayek or Roman transliteration
 word = mt.get_word("ꯃꯃꯥ")
@@ -189,22 +206,59 @@ print(state_song.get_lyrics("english"))
 
 ---
 
-### 5. Unified Cross-Corpus Search
+### 5. Daily Usable Conversational Sentences
 
 ```python
 import meitei_lang as mt
 
-# Search across vocabulary, literature, and songs
+# Total everyday sentences
+print("Total sentences:", mt.count_sentences())  # 120
+
+# List available sentence categories
+categories = mt.get_sentence_categories()
+print("Categories:", categories)
+
+# Retrieve a specific sentence
+greet = mt.get_sentence("greet_001")
+print(greet.meitei)   # ꯈꯨꯔꯨꯝꯖꯔꯤ꯫
+print(greet.roman)    # Khurumjari.
+print(greet.bengali)  # খুরূমজরি।
+print(greet.english)  # Greetings / Respectful salutations.
+
+# Filter sentences by category
+market_phrases = mt.get_sentences_by_category("market_shopping")
+for s in market_phrases[:3]:
+    print(f"- {s.meitei} ({s.roman}) -> {s.english}")
+
+# Search everyday sentences
+results = mt.search_sentences("Kangla")
+for s in results:
+    print(f"[{s.category}] {s.meitei}: {s.english}")
+
+# Get a random sentence for daily practice
+random_phrase = mt.get_random_sentence(category="food_dining")
+print("Practice phrase:", random_phrase)
+```
+
+---
+
+### 6. Unified Cross-Corpus Search
+
+```python
+import meitei_lang as mt
+
+# Search across vocabulary, literature, songs, and conversational sentences
 res = mt.search("Manipur")
 print(f"Found {res.total_count} total matches:")
 print(f" - {len(res.vocabulary)} vocabulary entries")
 print(f" - {len(res.books)} book passages")
 print(f" - {len(res.songs)} songs")
+print(f" - {len(res.sentences)} conversational sentences")
 ```
 
 ---
 
-### 6. Meitei Mayek Script Information
+### 7. Meitei Mayek Script Information
 
 ```python
 from meitei_lang import language_info

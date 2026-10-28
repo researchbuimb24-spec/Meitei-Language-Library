@@ -16,12 +16,12 @@ from meitei_lang.exceptions import BookNotFoundError, ChapterNotFoundError
 
 
 def test_books_count():
-    assert count_books() >= 3
+    assert count_books() == 10
 
 
 def test_list_books():
     books = list_books()
-    assert len(books) >= 3
+    assert len(books) == 10
     for b in books:
         assert isinstance(b, Book)
         assert b.book_id
@@ -159,4 +159,59 @@ def test_search_epics():
     babru_res = search_books("Babruvahana")
     assert len(babru_res) > 0
     assert any(r["book_id"] == "mahabharata" for r in babru_res)
+
+
+def test_top_10_books_collection():
+    expected_book_ids = [
+        "khamba_thoibi",
+        "phunga_wari",
+        "sana_leibak_chronicles",
+        "ramayana",
+        "mahabharata",
+        "numit_kappa",
+        "chainarol",
+        "panthoibi_khonggul",
+        "poireiton_khunthok",
+        "pakhangba_laihui",
+    ]
+    books = list_books()
+    assert len(books) == 10
+    found_ids = [b.book_id for b in books]
+    assert found_ids == expected_book_ids
+
+    for bid in expected_book_ids:
+        b = get_book(bid)
+        assert b.book_id == bid
+        assert len(b.chapters) >= 3
+        assert len(b.full_text()) > 300
+        assert any(0xABC0 <= ord(c) <= 0xABFF for c in b.title)
+
+
+def test_archaic_puyas_and_classics():
+    # Numit Kappa
+    nk = get_book("numit_kappa")
+    assert "Shooting of the Sun" in nk.title_en
+    assert nk.total_chapters() == 3
+    assert any("Khwai Nongchenbam" in ch.title_en for ch in nk.chapters)
+
+    # Chainarol
+    chainarol = get_book("chainarol")
+    assert "Chivalry" in chainarol.title_en or "Duels" in chainarol.title_en
+    assert chainarol.total_chapters() == 3
+
+    # Panthoibi Khonggul
+    panthoibi = get_book("panthoibi_khonggul")
+    assert "Panthoibi" in panthoibi.title_en
+    assert panthoibi.total_chapters() == 3
+
+    # Poireiton Khunthok
+    poireiton = get_book("poireiton_khunthok")
+    assert "Poireiton" in poireiton.title_en
+    assert poireiton.total_chapters() == 3
+
+    # Pakhangba Laihui
+    pakhangba = get_book("pakhangba_laihui")
+    assert "Pakhangba" in pakhangba.title_en
+    assert pakhangba.total_chapters() == 3
+
 

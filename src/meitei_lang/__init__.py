@@ -3,8 +3,9 @@
 Meitei (Manipuri) Language Library.
 
 A complete, production-quality Python package for the Meitei language (Manipuri),
-providing robust Meitei Mayek script handling, transliteration, 50,000+ authentic
-lexical entries, classical literary reading texts, and cultural songs with lyrics.
+providing robust Meitei Mayek script handling, transliteration, 170,000+ authentic
+lexical entries (1.5+ lakh words), daily usable sentences across 12 practical categories,
+10 classical literary reading texts, and 10 cultural songs with multi-script lyrics.
 """
 
 from .exceptions import (
@@ -13,6 +14,7 @@ from .exceptions import (
     BookNotFoundError,
     ChapterNotFoundError,
     SongNotFoundError,
+    SentenceNotFoundError,
     LyricsNotAvailableError,
     DataLoadError,
     ValidationError,
@@ -66,6 +68,18 @@ from .songs import (
     search_songs,
 )
 
+from .sentences import (
+    Sentence,
+    load_sentences,
+    count_sentences,
+    list_sentences,
+    get_sentence,
+    get_sentences_by_category,
+    get_sentence_categories,
+    search_sentences,
+    get_random_sentence,
+)
+
 from .search import (
     SearchResults,
     search,
@@ -84,7 +98,7 @@ from .language_info import (
     get_supported_scripts,
 )
 
-__version__ = "0.3.0"
+__version__ = "0.5.0"
 __author__ = "Meitei Language Project Maintainers"
 
 __all__ = [
@@ -97,6 +111,7 @@ __all__ = [
     "BookNotFoundError",
     "ChapterNotFoundError",
     "SongNotFoundError",
+    "SentenceNotFoundError",
     "LyricsNotAvailableError",
     "DataLoadError",
     "ValidationError",
@@ -151,6 +166,16 @@ __all__ = [
     "get_song",
     "get_lyrics",
     "search_songs",
+    # Daily Usable Sentences
+    "Sentence",
+    "load_sentences",
+    "count_sentences",
+    "list_sentences",
+    "get_sentence",
+    "get_sentences_by_category",
+    "get_sentence_categories",
+    "search_sentences",
+    "get_random_sentence",
     # Cross-corpus Search
     "SearchResults",
     "search",
