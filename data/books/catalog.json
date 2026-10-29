@@ -15,12 +15,12 @@
       "copyright": "Public Domain (Traditional Meitei Epic Folklore and Oral Heritage)",
       "rights_status": "Public Domain",
       "import_status": "FULLY_IMPORTED",
-      "total_chapters": 4,
-      "imported_chapters": 4,
-      "total_passages": 22,
-      "checksum_sha256": "d9b7279c5736d31bbb880fb676a68f3929d6d31b8e5352068b571352baf23843",
+      "total_chapters": 7,
+      "imported_chapters": 7,
+      "total_passages": 36,
+      "checksum_sha256": "d626dc16829405e4b7732f24f12ae9ee84ac121732c38f8b8a6c74c94f98aafe",
       "source_file": "books.json",
-      "last_imported_at": "2026-10-29T02:15:47.662760+00:00"
+      "last_imported_at": "2026-10-29T11:21:23.486547+00:00"
     },
     {
       "book_id": "phunga_wari",
@@ -35,12 +35,12 @@
       "copyright": "Public Domain (Traditional Cultural Expressions)",
       "rights_status": "Traditional Cultural Expressions",
       "import_status": "FULLY_IMPORTED",
-      "total_chapters": 4,
-      "imported_chapters": 4,
-      "total_passages": 24,
-      "checksum_sha256": "d9b7279c5736d31bbb880fb676a68f3929d6d31b8e5352068b571352baf23843",
+      "total_chapters": 7,
+      "imported_chapters": 7,
+      "total_passages": 39,
+      "checksum_sha256": "d626dc16829405e4b7732f24f12ae9ee84ac121732c38f8b8a6c74c94f98aafe",
       "source_file": "books.json",
-      "last_imported_at": "2026-10-29T02:15:47.662760+00:00"
+      "last_imported_at": "2026-10-29T11:21:23.486547+00:00"
     },
     {
       "book_id": "sana_leibak_chronicles",
@@ -55,12 +55,12 @@
       "copyright": "Public Domain (Historical Royal Heritage Documentation)",
       "rights_status": "Public Domain",
       "import_status": "FULLY_IMPORTED",
-      "total_chapters": 3,
-      "imported_chapters": 3,
-      "total_passages": 15,
-      "checksum_sha256": "d9b7279c5736d31bbb880fb676a68f3929d6d31b8e5352068b571352baf23843",
+      "total_chapters": 5,
+      "imported_chapters": 5,
+      "total_passages": 25,
+      "checksum_sha256": "d626dc16829405e4b7732f24f12ae9ee84ac121732c38f8b8a6c74c94f98aafe",
       "source_file": "books.json",
-      "last_imported_at": "2026-10-29T02:15:47.662760+00:00"
+      "last_imported_at": "2026-10-29T11:21:23.486547+00:00"
     },
     {
       "book_id": "ramayana",
@@ -75,12 +75,12 @@
       "copyright": "Public Domain (Classical 18th Century Translation)",
       "rights_status": "Public Domain",
       "import_status": "FULLY_IMPORTED",
-      "total_chapters": 4,
-      "imported_chapters": 4,
-      "total_passages": 23,
-      "checksum_sha256": "d9b7279c5736d31bbb880fb676a68f3929d6d31b8e5352068b571352baf23843",
+      "total_chapters": 6,
+      "imported_chapters": 6,
+      "total_passages": 33,
+      "checksum_sha256": "d626dc16829405e4b7732f24f12ae9ee84ac121732c38f8b8a6c74c94f98aafe",
       "source_file": "books.json",
-      "last_imported_at": "2026-10-29T02:15:47.662760+00:00"
+      "last_imported_at": "2026-10-29T11:21:23.486547+00:00"
     },
     {
       "book_id": "mahabharata",
@@ -95,12 +95,12 @@
       "copyright": "Public Domain (Traditional Cultural Expressions)",
       "rights_status": "Public Domain",
       "import_status": "FULLY_IMPORTED",
-      "total_chapters": 4,
-      "imported_chapters": 4,
-      "total_passages": 19,
-      "checksum_sha256": "d9b7279c5736d31bbb880fb676a68f3929d6d31b8e5352068b571352baf23843",
+      "total_chapters": 6,
+      "imported_chapters": 6,
+      "total_passages": 29,
+      "checksum_sha256": "d626dc16829405e4b7732f24f12ae9ee84ac121732c38f8b8a6c74c94f98aafe",
       "source_file": "books.json",
-      "last_imported_at": "2026-10-29T02:15:47.662760+00:00"
+      "last_imported_at": "2026-10-29T11:21:23.486547+00:00"
     },
     {
       "book_id": "numit_kappa",
@@ -115,12 +115,12 @@
       "copyright": "Public Domain (Ancient Meitei Puya Heritage)",
       "rights_status": "Public Domain",
       "import_status": "FULLY_IMPORTED",
-      "total_chapters": 3,
-      "imported_chapters": 3,
-      "total_passages": 10,
-      "checksum_sha256": "d9b7279c5736d31bbb880fb676a68f3929d6d31b8e5352068b571352baf23843",
+      "total_chapters": 5,
+      "imported_chapters": 5,
+      "total_passages": 18,
+      "checksum_sha256": "d626dc16829405e4b7732f24f12ae9ee84ac121732c38f8b8a6c74c94f98aafe",
       "source_file": "books.json",
-      "last_imported_at": "2026-10-29T02:15:47.662760+00:00"
+      "last_imported_at": "2026-10-29T11:21:23.486547+00:00"
     },
     {
       "book_id": "chainarol",
@@ -135,12 +135,12 @@
       "copyright": "Public Domain (Ancient Meitei Martial Lore)",
       "rights_status": "Public Domain",
       "import_status": "FULLY_IMPORTED",
-      "total_chapters": 3,
-      "imported_chapters": 3,
-      "total_passages": 8,
-      "checksum_sha256": "d9b7279c5736d31bbb880fb676a68f3929d6d31b8e5352068b571352baf23843",
+      "total_chapters": 5,
+      "imported_chapters": 5,
+      "total_passages": 17,
+      "checksum_sha256": "d626dc16829405e4b7732f24f12ae9ee84ac121732c38f8b8a6c74c94f98aafe",
       "source_file": "books.json",
-      "last_imported_at": "2026-10-29T02:15:47.662760+00:00"
+      "last_imported_at": "2026-10-29T11:21:23.486547+00:00"
     },
     {
       "book_id": "panthoibi_khonggul",
@@ -155,12 +155,12 @@
       "copyright": "Public Domain (Ancient Sanamahi Theological Text)",
       "rights_status": "Public Domain",
       "import_status": "FULLY_IMPORTED",
-      "total_chapters": 3,
-      "imported_chapters": 3,
-      "total_passages": 9,
-      "checksum_sha256": "d9b7279c5736d31bbb880fb676a68f3929d6d31b8e5352068b571352baf23843",
+      "total_chapters": 5,
+      "imported_chapters": 5,
+      "total_passages": 17,
+      "checksum_sha256": "d626dc16829405e4b7732f24f12ae9ee84ac121732c38f8b8a6c74c94f98aafe",
       "source_file": "books.json",
-      "last_imported_at": "2026-10-29T02:15:47.662760+00:00"
+      "last_imported_at": "2026-10-29T11:21:23.486547+00:00"
     },
     {
       "book_id": "poireiton_khunthok",
@@ -175,12 +175,12 @@
       "copyright": "Public Domain (Archaic Meitei Settlement History)",
       "rights_status": "Public Domain",
       "import_status": "FULLY_IMPORTED",
-      "total_chapters": 3,
-      "imported_chapters": 3,
-      "total_passages": 9,
-      "checksum_sha256": "d9b7279c5736d31bbb880fb676a68f3929d6d31b8e5352068b571352baf23843",
+      "total_chapters": 5,
+      "imported_chapters": 5,
+      "total_passages": 17,
+      "checksum_sha256": "d626dc16829405e4b7732f24f12ae9ee84ac121732c38f8b8a6c74c94f98aafe",
       "source_file": "books.json",
-      "last_imported_at": "2026-10-29T02:15:47.662760+00:00"
+      "last_imported_at": "2026-10-29T11:21:23.486547+00:00"
     },
     {
       "book_id": "pakhangba_laihui",
@@ -195,12 +195,12 @@
       "copyright": "Public Domain (Sacred Royal Religious Chronicle)",
       "rights_status": "Public Domain",
       "import_status": "FULLY_IMPORTED",
-      "total_chapters": 3,
-      "imported_chapters": 3,
-      "total_passages": 8,
-      "checksum_sha256": "d9b7279c5736d31bbb880fb676a68f3929d6d31b8e5352068b571352baf23843",
+      "total_chapters": 5,
+      "imported_chapters": 5,
+      "total_passages": 16,
+      "checksum_sha256": "d626dc16829405e4b7732f24f12ae9ee84ac121732c38f8b8a6c74c94f98aafe",
       "source_file": "books.json",
-      "last_imported_at": "2026-10-29T02:15:47.662760+00:00"
+      "last_imported_at": "2026-10-29T11:21:23.486547+00:00"
     }
   ]
 }

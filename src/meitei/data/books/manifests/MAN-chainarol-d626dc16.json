@@ -1,0 +1,13 @@
+{
+  "manifest_id": "MAN-chainarol-d626dc16",
+  "book_id": "chainarol",
+  "source_file_path": "src\\meitei_lang\\data\\books.json",
+  "file_format": "json",
+  "sha256_checksum": "d626dc16829405e4b7732f24f12ae9ee84ac121732c38f8b8a6c74c94f98aafe",
+  "imported_at": "2026-10-29T11:21:23.486547+00:00",
+  "total_chapters": 5,
+  "total_passages": 17,
+  "total_word_count": 208,
+  "importer": "meitei-books-importer",
+  "notes": "Successfully segmented into 5 chapters and 17 passages."
+}

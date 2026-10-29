@@ -18,14 +18,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Curated **120 authentic everyday conversational sentences** across 12 practical categories (`greetings`, `introductions`, `politeness_gratitude`, `market_shopping`, `food_dining`, `travel_directions`, `time_weather`, `family_home`, `health_emergency`, `work_study`, `culture_festivals`, `feelings_emotions`).
   - Full multi-script representation: Meitei Mayek, Roman transliteration, Bengali script, English translation, and situational context.
   - New API methods: `load_sentences()`, `count_sentences()`, `list_sentences()`, `get_sentence()`, `get_sentences_by_category()`, `get_sentence_categories()`, `search_sentences()`, and `get_random_sentence()`.
-- **Top 10 Books & Puyas Collection (34 Chapters)**:
-  - Doubled the literature collection from 5 to **10 complete books**:
-    - *Numit Kappa* (The Shooting of the Sun — Archaic cosmogonic mythological puya).
-    - *Chainarol* (The Way of the Warrior — Classical historical code of chivalry and single duels).
-    - *Panthoibi Khonggul* (The Trail of Goddess Panthoibi — Celebrated mythological poetic epic).
-    - *Poireiton Khunthok* (The Great Migration of Poireiton — Archaic settlement chronicle).
-    - *Pakhangba Laihui* (The Divine Chronicle of Pakhangba — Sacred Kangla coronation liturgy).
-  - All 10 books feature multi-paragraph chapters in authentic Meitei Mayek script and English summaries.
+- **Top 10 Books & Puyas Collection (56 Complete Chapters, 247 Passages)**:
+  - Complete multi-chapter coverage across all **10 heritage books and puyas**:
+    - *Khamba Thoibi* (7 chapters, 36 passages — Moirang Kangleirol epic cycles, Torbung race, Khoirentak tiger).
+    - *Phunga Wari* (7 chapters, 39 passages — Hearth folktales including Keibu Keiba, Sandrembi-Chaisra, Harinongnang).
+    - *Sana Leibak Chronicles* (5 chapters, 25 passages — Kangla Fort, Cheitharol Kumbaba, Seven Years Devastation).
+    - *Numit Kappa* (5 chapters, 18 passages — Solar mythological puya, archer Khwai Nongchenbam, Amaibi solar hymns).
+    - *Chainarol* (5 chapters, 17 passages — Martial code of chivalry, ethical duels, Khongchao warrior oaths).
+    - *Panthoibi Khonggul* (5 chapters, 17 passages — Divine wanderings of Panthoibi, Nongpok Ningthou, Mount Nongmaiching).
+    - *Poireiton Khunthok* (5 chapters, 17 passages — Civilizational migration from Khamnung, sacred fire cult).
+    - *Pakhangba Laihui* (5 chapters, 16 passages — Kangla coronation, dragon serpent Paphal iconography, 7 Salais).
+    - *Ramayana* (6 chapters, 33 passages — Classical 18th-century Meitei translation, Sundara Kanda, Ayodhya coronation).
+    - *Mahabharata* (6 chapters, 29 passages — Ancient Manipur connection, Chitrangada, Babruvahana, Sanjivani jewel).
+  - All 10 books feature authentic Meitei Mayek text, Latin transliteration, English annotations, deterministic passage IDs, and SHA-256 cryptographic verification.
 - **Unified Cross-Corpus Search Enhancement**:
   - Upgraded `mt.search()` to query across all 4 corpora simultaneously: vocabulary, literature, songs, and conversational sentences.
 - **Testing**:

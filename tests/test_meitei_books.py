@@ -293,8 +293,8 @@ def test_book_validator_valid():
     validator = BookValidator(data_dir="data")
     res = validator.validate_book("khamba_thoibi")
     assert res.valid is True
-    assert res.imported_chapters_count == 4
-    assert res.passages_count == 22
+    assert res.imported_chapters_count == 7
+    assert res.passages_count == 36
     assert res.errors == []
 
 

@@ -98,7 +98,7 @@ def test_ramayana_book():
     assert book.book_id == "ramayana"
     assert book.title == "ꯔꯥꯃꯥꯌꯟ"
     assert "Ramayana" in book.title_en
-    assert book.total_chapters() == 4
+    assert book.total_chapters() == 6
     assert "Angom Gopi" in book.author
     assert book.language == "Meitei (Manipuri)"
     assert book.script == "Meitei Mayek"
@@ -125,7 +125,7 @@ def test_mahabharata_book():
     assert book.book_id == "mahabharata"
     assert book.title == "ꯃꯍꯥꯚꯥꯔꯠ"
     assert "Mahabharata" in book.title_en
-    assert book.total_chapters() == 4
+    assert book.total_chapters() == 6
     assert "Manipur" in book.description
 
     # Chapter 2 (Chitrangada)
@@ -191,27 +191,27 @@ def test_archaic_puyas_and_classics():
     # Numit Kappa
     nk = get_book("numit_kappa")
     assert "Shooting of the Sun" in nk.title_en
-    assert nk.total_chapters() == 3
+    assert nk.total_chapters() == 5
     assert any("Khwai Nongchenbam" in ch.title_en for ch in nk.chapters)
 
     # Chainarol
     chainarol = get_book("chainarol")
     assert "Chivalry" in chainarol.title_en or "Duels" in chainarol.title_en
-    assert chainarol.total_chapters() == 3
+    assert chainarol.total_chapters() == 5
 
     # Panthoibi Khonggul
     panthoibi = get_book("panthoibi_khonggul")
     assert "Panthoibi" in panthoibi.title_en
-    assert panthoibi.total_chapters() == 3
+    assert panthoibi.total_chapters() == 5
 
     # Poireiton Khunthok
     poireiton = get_book("poireiton_khunthok")
     assert "Poireiton" in poireiton.title_en
-    assert poireiton.total_chapters() == 3
+    assert poireiton.total_chapters() == 5
 
     # Pakhangba Laihui
     pakhangba = get_book("pakhangba_laihui")
     assert "Pakhangba" in pakhangba.title_en
-    assert pakhangba.total_chapters() == 3
+    assert pakhangba.total_chapters() == 5
 
 
