@@ -1,0 +1,69 @@
+{
+  "topics": [
+    {
+      "id": "pronouns",
+      "name": "Personal Pronouns & Deictic Reference",
+      "status": "POPULATED",
+      "description": "Pronominal paradigm distinguishing first (ei), second familiar (nang) vs honorific (nahak), and third person (mahak), including case suffixation and discourse roles.",
+      "primary_sources": ["MEI-SRC-000003", "MEI-SRC-000001"],
+      "documentation": "Directly attested in Pettigrew 1912 (p. 14) and Grierson 1904 LSI Vol. III Part III (p. 19, 54)."
+    },
+    {
+      "id": "numerals",
+      "name": "Numerals & Counting System",
+      "status": "POPULATED",
+      "description": "Morphology of decimal roots 1–5 with prefixation (vocalic a- on roots 1–3, nasal ma- on roots 4–5), decade formation, and compounding.",
+      "primary_sources": ["MEI-SRC-000001", "MEI-SRC-000003"],
+      "documentation": "Attested in Grierson 1904 (p. 54 numeral table) and Pettigrew 1912 (p. 25)."
+    },
+    {
+      "id": "negation",
+      "name": "Verbal & Indicative Negation",
+      "status": "POPULATED",
+      "description": "Morphological suffixation of negative marker -te / -de directly onto verb stems, intervocalic voicing rules, and contrast with prohibitive imperative forms.",
+      "primary_sources": ["MEI-SRC-000004", "MEI-SRC-000003"],
+      "documentation": "Analyzed in Chelliah 1997 A Grammar of Meithei (pp. 260–264) and Pettigrew 1912 (pp. 38–40)."
+    },
+    {
+      "id": "verb_morphology",
+      "name": "Verb Morphology & Aspect Suffixes",
+      "status": "POPULATED",
+      "description": "Agglutinative suffix chain attaching aspectual markers (progressive -li/-ri, perfective -le/-re) and modal formatives to verbal roots.",
+      "primary_sources": ["MEI-SRC-000004", "MEI-SRC-000003"],
+      "documentation": "Attested in Chelliah 1997 (pp. 200–210) and Pettigrew 1912 (pp. 35–37)."
+    },
+    {
+      "id": "sentence_structure",
+      "name": "Sentence Structure & Syntax",
+      "status": "POPULATED",
+      "description": "Canonical Subject-Object-Verb (SOV) head-final word order, postpositional phrase structure, agentive/nominative marking (-na), and topic-comment organization.",
+      "primary_sources": ["MEI-SRC-000001", "MEI-SRC-000004"],
+      "documentation": "Documented in Grierson 1904 (p. 22) and Chelliah 1997 (pp. 280–288)."
+    },
+    {
+      "id": "classifiers",
+      "name": "Numeral Classifiers",
+      "status": "UNPOPULATED",
+      "description": "System of sortal and mensural numeral classifiers (e.g. animacy, shape, roundness, container classifiers) qualifying countable nouns.",
+      "primary_sources": ["MEI-SRC-000004"],
+      "unpopulated_reason": "Recognized linguistic category (Chelliah 1997, pp. 105–115). Specific verified manuscript/fieldwork citations pending formal philological ingestion."
+    },
+    {
+      "id": "noun_morphology",
+      "name": "Noun Morphology & Case Postpositions",
+      "status": "UNPOPULATED",
+      "description": "Nominal inflection, case-marking postpositions (-na, -bu, -gi, -da, -tagi), gender formative affixes (-pa/-pi), and collective pluralizers.",
+      "primary_sources": ["MEI-SRC-000004"],
+      "unpopulated_reason": "Recognized research category (Chelliah 1997, pp. 95–130). Category registered; specific lexical-morphological entries pending peer-reviewed verification."
+    },
+    {
+      "id": "particles",
+      "name": "Discourse & Evidential Particles",
+      "status": "UNPOPULATED",
+      "description": "Information-packaging enclitics, focus markers (-su, -di), interrogative morphemes, and evidential suffixes.",
+      "primary_sources": ["MEI-SRC-000003", "MEI-SRC-000004"],
+      "unpopulated_reason": "Recognized research category. Individual textual attestations and folios pending systematic verification against primary corpora."
+    }
+  ]
+}
+

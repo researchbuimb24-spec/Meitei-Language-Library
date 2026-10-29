@@ -3,33 +3,32 @@ requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "meitei-lang"
-version = "0.5.0"
-description = "Comprehensive Python library for the Meitei (Manipuri) language, supporting Meitei Mayek script, transliteration, 170,000+ vocabulary entries (1.5+ lakh words), daily usable sentences, 10 classic books, and 10 authentic songs."
+name = "meitei"
+version = "0.1.0"
+description = "Lightweight, offline-first Python library for the Meitei (Manipuri / Meiteilon) language of Manipur, India."
 readme = "README.md"
 authors = [
-    { name = "Meitei Language Project Maintainers" }
+    { name = "Meitei Language Project Contributors" }
 ]
 license = { text = "MIT" }
 requires-python = ">=3.9"
 keywords = [
     "meitei",
     "manipuri",
+    "meiteilon",
     "meitei-mayek",
-    "nlp",
-    "transliteration",
     "tibeto-burman",
     "northeast-india",
     "linguistics",
-    "language-data"
+    "dictionary",
+    "offline-first"
 ]
 classifiers = [
-    "Development Status :: 4 - Beta",
+    "Development Status :: 3 - Alpha",
     "Intended Audience :: Developers",
     "Intended Audience :: Science/Research",
     "Topic :: Text Processing :: Linguistic",
     "Topic :: Software Development :: Libraries :: Python Modules",
-    "License :: OSI Approved :: MIT License",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
@@ -41,21 +40,19 @@ classifiers = [
 dependencies = []
 
 [project.scripts]
-meitei = "meitei_lang.cli:main"
+meitei = "meitei.cli:main"
 
 [project.optional-dependencies]
 dev = [
     "pytest>=7.0.0",
-    "build>=1.0.0",
-    "twine>=4.0.0",
 ]
 
 [tool.setuptools.packages.find]
 where = ["src"]
 
 [tool.setuptools.package-data]
+meitei = ["py.typed", "data/**/*"]
 meitei_lang = ["data/*", "py.typed"]
 
 [tool.pyright]
-include = ["src", "scripts", "tests"]
-extraPaths = ["src", "scripts"]
+include = ["src", "tests"]

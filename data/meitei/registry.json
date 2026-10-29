@@ -1,0 +1,92 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "name": "Meitei Language Library Data Registry",
+  "version": "1.0.0",
+  "description": "Registry and governance specification for authentic Meitei (Manipuri) language datasets, defining stable ID conventions, validation rules, partition guarantees, and provenance requirements.",
+  "governance": {
+    "policy": "Strict Scientific and Cultural Integrity",
+    "no_fabrication_rule": "No lexical records, senses, or citations shall be algorithmically fabricated or hallucinated. All core records require authentic attestation or native-speaker verification.",
+    "dataset_partitioning": {
+      "core_lexicon": "Restricted exclusively to SOURCE_ATTESTED and VERIFIED entries.",
+      "candidate_lexicon": "Reserved for UNVERIFIED, COMMUNITY_SUBMITTED, AI_CANDIDATE, CITATION_MISMATCH, and REJECTED entries awaiting editorial vetting."
+    }
+  },
+  "id_conventions": {
+    "sources": {
+      "prefix": "MEI-SRC-",
+      "format": "MEI-SRC-\\d{6}",
+      "example": "MEI-SRC-000001",
+      "description": "Stable 6-digit zero-padded numeric identifier for bibliographic sources."
+    },
+    "lexical_entries": {
+      "prefix": "MEI-LEX-",
+      "format": "MEI-LEX-\\d{7}",
+      "example": "MEI-LEX-0000001",
+      "description": "Stable 7-digit zero-padded numeric identifier for primary lexical entries."
+    },
+    "senses": {
+      "prefix": "MEI-SNS-",
+      "format": "MEI-SNS-\\d{7}",
+      "example": "MEI-SNS-0000001",
+      "description": "Stable 7-digit zero-padded numeric identifier for lexical senses."
+    },
+    "variants": {
+      "prefix": "MEI-VAR-",
+      "format": "MEI-VAR-\\d{7}",
+      "example": "MEI-VAR-0000001",
+      "description": "Stable 7-digit zero-padded numeric identifier for spelling and orthographic variants."
+    },
+    "translation_glosses": {
+      "prefix": "MEI-GLS-",
+      "format": "MEI-GLS-\\d{7}",
+      "example": "MEI-GLS-0000001",
+      "description": "Stable 7-digit zero-padded numeric identifier for cross-lingual translation glosses."
+    }
+  },
+  "allowed_statuses": [
+    "SOURCE_ATTESTED",
+    "VERIFIED",
+    "COMMUNITY_SUBMITTED",
+    "UNVERIFIED",
+    "AI_CANDIDATE",
+    "CITATION_MISMATCH",
+    "REJECTED"
+  ],
+  "status_definitions": {
+    "SOURCE_ATTESTED": "Directly attested in a cataloged bibliographic source (Puya, royal chronicle, published dictionary, or critical edition) with an exact citation locator.",
+    "VERIFIED": "Attested and independently confirmed by qualified native speakers or linguists adhering to standard orthography.",
+    "COMMUNITY_SUBMITTED": "Contributed by community speakers or field contributors; pending editorial review and verification.",
+    "UNVERIFIED": "Ingested from raw texts or provisional notes; unvetted.",
+    "AI_CANDIDATE": "Generated or proposed by computational language models; quarantined in candidate_lexicon until peer-reviewed against primary sources.",
+    "CITATION_MISMATCH": "Flagged during audit because cited source text, folio, or page does not corroborate the recorded meaning or spelling.",
+    "REJECTED": "Reviewed and formally rejected due to factual error, spurious attribution, or uncorrectable defect."
+  },
+  "datasets": {
+    "core_lexicon": {
+      "file": "data/lexicon/core_lexicon.jsonl",
+      "format": "JSONL",
+      "description": "Authoritative lexical entries meeting SOURCE_ATTESTED or VERIFIED standards."
+    },
+    "variants": {
+      "file": "data/lexicon/variants.jsonl",
+      "format": "JSONL",
+      "description": "Historical, regional, and orthographic spelling variants mapped to parent entries."
+    },
+    "candidate_lexicon": {
+      "file": "data/lexicon/candidate_lexicon.jsonl",
+      "format": "JSONL",
+      "description": "Quarantine ledger for community submissions, unverified entries, and AI candidates."
+    },
+    "sources": {
+      "file": "data/sources/sources.jsonl",
+      "format": "JSONL",
+      "description": "Catalog of authentic manuscripts, historical puyas, published lexicons, and fieldwork sessions."
+    },
+    "glosses": {
+      "file": "data/translations/glosses.jsonl",
+      "format": "JSONL",
+      "description": "Cross-lingual translation glosses linked to entries and senses."
+    }
+  }
+}
+

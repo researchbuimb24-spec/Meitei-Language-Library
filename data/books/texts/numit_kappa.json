@@ -1,0 +1,180 @@
+{
+  "book_id": "numit_kappa",
+  "title": "ꯅꯨꯃꯤꯠ ꯀꯥꯞꯄ",
+  "title_en": "Numit Kappa: The Shooting of the Sun",
+  "author": "Ancient Meitei Sages / Maichous (Oral Puya Tradition)",
+  "language": "Meitei (Manipuri)",
+  "script": "Meitei Mayek",
+  "genre": "Ancient Cosmogonic Puya / Mythological Epic",
+  "description": "One of the oldest surviving Meitei mythological texts and ritual treatises. It chronicles the archaic era when two sun brothers shone simultaneously in the sky, scorching the earth, until the heroic archer Khwai Nongchenbam shot one sun with an arrow, restoring diurnal balance, hymns of sunrise, and cosmic harmony to Kangleipak.",
+  "source": "Archaic Puya Archives of Manipur & Directorate of Language Planning Literary Preservation",
+  "copyright": "Public Domain (Archaic Cultural Heritage of Manipur)",
+  "chapters": [
+    {
+      "chapter_id": "numit_kappa-c01",
+      "book_id": "numit_kappa",
+      "chapter_number": 1,
+      "title": "ꯅꯨꯃꯤꯠ ꯃꯆꯤꯟ-ꯃꯅꯥꯎ ꯑꯅꯤ ꯑꯃꯁꯨꯡ ꯃꯥꯂꯦꯝ ꯃꯩꯁꯥ",
+      "title_en": "The Two Sun Brothers and the Scorched Earth",
+      "passages": [
+        {
+          "passage_id": "numit_kappa-c01-p001",
+          "book_id": "numit_kappa",
+          "chapter_number": 1,
+          "passage_number": 1,
+          "text": "ꯑꯔꯤꯕ ꯃꯥꯂꯦꯝꯒꯤ ꯃꯇꯝꯗ ꯑꯇꯤꯌꯥꯗ ꯅꯨꯃꯤꯠ ꯃꯆꯤꯟ-ꯃꯅꯥꯎ ꯑꯅꯤ ꯄꯨꯟꯅ ꯉꯥꯟꯅꯔꯝꯃꯤ꯫",
+          "text_roman": null,
+          "text_bengali": null,
+          "translation_en": null,
+          "translation_provenance": null,
+          "word_count": 9,
+          "character_count": 59
+        },
+        {
+          "passage_id": "numit_kappa-c01-p002",
+          "book_id": "numit_kappa",
+          "chapter_number": 1,
+          "passage_number": 2,
+          "text": "ꯃꯈꯣꯏ ꯑꯅꯤꯒꯤ ꯑꯀꯟꯕ ꯃꯩꯁꯥꯅ ꯃꯥꯂꯦꯝ ꯁꯤꯟꯕ ꯊꯨꯡꯅ ꯆꯥꯛꯍꯟꯈꯤ, ꯏꯁꯤꯡ ꯄꯨꯝꯅꯃꯛ ꯀꯪꯈꯤ ꯑꯃꯁꯨꯡ ꯎ-ꯋꯥ, ꯁꯥ-ꯉꯥ ꯑꯃꯁꯨꯡ ꯃꯤꯑꯣꯏꯕ ꯄꯨꯝꯅꯃꯛ ꯑꯋꯥꯕꯒꯤ ꯃꯔꯨꯝꯗ ꯇꯥꯈꯤ꯫",
+          "text_roman": null,
+          "text_bengali": null,
+          "translation_en": null,
+          "translation_provenance": null,
+          "word_count": 20,
+          "character_count": 120
+        },
+        {
+          "passage_id": "numit_kappa-c01-p003",
+          "book_id": "numit_kappa",
+          "chapter_number": 1,
+          "passage_number": 3,
+          "text": "ꯅꯨꯃꯤꯗꯥꯡ ꯂꯩꯇꯅ ꯃꯇꯝ ꯆꯨꯞꯄꯗ ꯅꯨꯃꯤꯠ ꯈꯛꯇ ꯉꯥꯟꯕꯅ ꯃꯤꯌꯥꯝꯅ ꯄꯣꯊꯥꯐꯝ ꯈꯪꯈꯤꯗꯦ꯫",
+          "text_roman": null,
+          "text_bengali": null,
+          "translation_en": null,
+          "translation_provenance": null,
+          "word_count": 10,
+          "character_count": 60
+        },
+        {
+          "passage_id": "numit_kappa-c01-p004",
+          "book_id": "numit_kappa",
+          "chapter_number": 1,
+          "passage_number": 4,
+          "text": "ꯃꯁꯤꯒꯤ ꯑꯋꯥꯕ ꯑꯁꯤ ꯀꯣꯛꯍꯟꯅꯕ ꯈ꯭ꯋꯥꯏ ꯅꯣꯡꯆꯦꯟꯕꯝꯅ ꯑꯀꯟꯕ ꯋꯥꯔꯦꯞ ꯂꯧꯈꯤ꯫",
+          "text_roman": null,
+          "text_bengali": null,
+          "translation_en": null,
+          "translation_provenance": null,
+          "word_count": 9,
+          "character_count": 55
+        }
+      ],
+      "summary": null,
+      "translation_en": null,
+      "translation_provenance": null
+    },
+    {
+      "chapter_id": "numit_kappa-c02",
+      "book_id": "numit_kappa",
+      "chapter_number": 2,
+      "title": "ꯈ꯭ꯋꯥꯏ ꯅꯣꯡꯆꯦꯟꯕꯝꯒꯤ ꯂꯤꯔꯨꯡ ꯑꯃꯁꯨꯡ ꯅꯨꯃꯤꯠ ꯀꯥꯞꯄ",
+      "title_en": "The Bow of Khwai Nongchenbam and the Shooting of the Sun",
+      "passages": [
+        {
+          "passage_id": "numit_kappa-c02-p001",
+          "book_id": "numit_kappa",
+          "chapter_number": 2,
+          "passage_number": 1,
+          "text": "ꯈ꯭ꯋꯥꯏ ꯅꯣꯡꯆꯦꯟꯕꯝꯅ ꯂꯤꯔꯨꯡ ꯑꯃꯁꯨꯡ ꯇꯦꯟ ꯄꯥꯏꯗꯨꯅ ꯑꯇꯤꯌꯥꯗ ꯉꯥꯟꯅꯔꯤꯕ ꯅꯨꯃꯤꯠ ꯑꯅꯤꯒꯤ ꯃꯔꯛꯇ ꯑꯃꯕꯨ ꯀꯥꯞꯈꯤ꯫",
+          "text_roman": null,
+          "text_bengali": null,
+          "translation_en": null,
+          "translation_provenance": null,
+          "word_count": 13,
+          "character_count": 82
+        },
+        {
+          "passage_id": "numit_kappa-c02-p002",
+          "book_id": "numit_kappa",
+          "chapter_number": 2,
+          "passage_number": 2,
+          "text": "ꯇꯦꯟꯅ ꯄꯥꯟꯂꯕ ꯅꯨꯃꯤꯠ ꯑꯗꯨ ꯃꯉꯥꯜ ꯃꯨꯠꯊꯣꯛꯇꯨꯅ ꯃꯥꯡꯈꯤ, ꯑꯗꯨꯒ ꯍꯤꯡꯗꯨꯅ ꯂꯩꯔꯤꯕ ꯑꯇꯣꯞꯄ ꯅꯨꯃꯤꯠ ꯑꯗꯨꯅ ꯀꯤꯗꯨꯅ ꯑꯔꯣꯟꯕ ꯂꯝꯗ ꯂꯣꯠꯈꯤ꯫",
+          "text_roman": null,
+          "text_bengali": null,
+          "translation_en": null,
+          "translation_provenance": null,
+          "word_count": 17,
+          "character_count": 100
+        },
+        {
+          "passage_id": "numit_kappa-c02-p003",
+          "book_id": "numit_kappa",
+          "chapter_number": 2,
+          "passage_number": 3,
+          "text": "ꯃꯁꯤꯅ ꯃꯔꯝ ꯑꯣꯏꯗꯨꯅ ꯃꯥꯂꯦꯝ ꯄꯨꯝꯕ ꯑꯃꯝꯕꯅ ꯀꯨꯞꯁꯤꯟꯈꯤ ꯑꯃꯁꯨꯡ ꯃꯤꯑꯣꯏꯕ ꯑꯃꯁꯨꯡ ꯊꯋꯥꯏ ꯄꯥꯟꯕ ꯄꯨꯝꯅꯃꯛ ꯑꯃꯨꯛ ꯍꯟꯅ ꯑꯋꯥꯕꯗ ꯇꯥꯈꯤ꯫",
+          "text_roman": null,
+          "text_bengali": null,
+          "translation_en": null,
+          "translation_provenance": null,
+          "word_count": 17,
+          "character_count": 98
+        }
+      ],
+      "summary": null,
+      "translation_en": null,
+      "translation_provenance": null
+    },
+    {
+      "chapter_id": "numit_kappa-c03",
+      "book_id": "numit_kappa",
+      "chapter_number": 3,
+      "title": "ꯅꯨꯃꯤꯠ ꯀꯧꯕꯒꯤ ꯊꯧꯔꯝ ꯑꯃꯁꯨꯡ ꯃꯉꯥꯜ ꯍꯟꯖꯤꯟꯂꯛꯄ",
+      "title_en": "The Ritual Invocation of the Sun and the Restoration of Dawn",
+      "passages": [
+        {
+          "passage_id": "numit_kappa-c03-p001",
+          "book_id": "numit_kappa",
+          "chapter_number": 3,
+          "passage_number": 1,
+          "text": "ꯑꯃꯝꯕ ꯑꯁꯤꯗꯒꯤ ꯅꯥꯟꯊꯣꯛꯅꯕ ꯃꯥꯏꯕ-ꯃꯥꯏꯕꯤꯁꯤꯡ ꯑꯃꯁꯨꯡ ꯁꯥ-ꯉꯥ ꯄꯨꯝꯅꯃꯛꯅ ꯂꯣꯠꯂꯕ ꯅꯨꯃꯤꯠꯄꯨ ꯊꯧꯖꯥꯜ ꯅꯤꯖꯗꯨꯅ ꯑꯃꯨꯛ ꯍꯟꯅ ꯊꯣꯛꯂꯛꯅꯕ ꯀꯧꯈꯤ꯫",
+          "text_roman": null,
+          "text_bengali": null,
+          "translation_en": null,
+          "translation_provenance": null,
+          "word_count": 15,
+          "character_count": 104
+        },
+        {
+          "passage_id": "numit_kappa-c03-p002",
+          "book_id": "numit_kappa",
+          "chapter_number": 3,
+          "passage_number": 2,
+          "text": "ꯑꯔꯣꯏꯕꯗ ꯌꯦꯟꯕꯥꯎꯅ ꯈꯣꯡꯂꯛꯄꯗ ꯅꯨꯃꯤꯠꯅ ꯊꯃꯣꯏ ꯅꯣꯡꯊꯗꯨꯅ ꯑꯇꯤꯌꯥꯗ ꯑꯃꯨꯛ ꯊꯣꯛꯂꯛꯈꯤ꯫",
+          "text_roman": null,
+          "text_bengali": null,
+          "translation_en": null,
+          "translation_provenance": null,
+          "word_count": 9,
+          "character_count": 63
+        },
+        {
+          "passage_id": "numit_kappa-c03-p003",
+          "book_id": "numit_kappa",
+          "chapter_number": 3,
+          "passage_number": 3,
+          "text": "ꯃꯗꯨꯗꯒꯤ ꯍꯧꯅ ꯅꯨꯃꯤꯠ ꯑꯃꯁꯨꯡ ꯑꯍꯤꯡꯒꯤ ꯆꯠꯅꯕꯤ ꯂꯦꯞꯈꯤ, ꯑꯃꯁꯨꯡ ꯅꯨꯃꯤꯠ ꯀꯥꯞꯄꯒꯤ ꯂꯥꯏꯁꯣꯜ ꯑꯁꯤ ꯀꯪꯂꯩꯄꯥꯛꯀꯤ ꯂꯥꯏꯅꯤꯡ ꯊꯧꯔꯝ ꯈꯨꯗꯤꯡꯗ ꯑꯆꯨꯝꯕ ꯃꯉꯥꯜ ꯄꯨꯔꯛꯅꯕ ꯏꯁꯩ ꯑꯣꯏꯅ ꯁꯛꯂꯤ꯫",
+          "text_roman": null,
+          "text_bengali": null,
+          "translation_en": null,
+          "translation_provenance": null,
+          "word_count": 22,
+          "character_count": 134
+        }
+      ],
+      "summary": null,
+      "translation_en": null,
+      "translation_provenance": null
+    }
+  ]
+}

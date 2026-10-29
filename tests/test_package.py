@@ -71,3 +71,50 @@ def test_language_info_constants():
     # Alphabet list
     alphabet = language_info.get_alphabet(include_extended=False)
     assert len(alphabet) == 18
+
+
+def test_meitei_package_metadata_and_exports():
+    import meitei
+
+    assert hasattr(meitei, "__version__")
+    assert meitei.__version__ == "0.1.0"
+    assert "MIT" in meitei.__license__
+    assert "CC BY-SA 4.0" in meitei.__license__
+
+    # Check that core models, functions, and enums are exported
+    assert hasattr(meitei, "search")
+    assert hasattr(meitei, "translate")
+    assert hasattr(meitei, "list_grammar_topics")
+    assert hasattr(meitei, "list_books")
+    assert hasattr(meitei, "read_passages")
+    assert hasattr(meitei, "load_reviews")
+    assert hasattr(meitei, "audit_repository")
+    assert hasattr(meitei, "normalize_text")
+    assert hasattr(meitei, "detect_script")
+    assert hasattr(meitei, "convert_script")
+
+
+def test_meitei_offline_independent_path_resolution(tmp_path, monkeypatch):
+    import meitei
+
+    # Switch working directory to an isolated temp directory without any 'data' directory
+    monkeypatch.chdir(tmp_path)
+    assert not (tmp_path / "data").exists()
+
+    # Search should still resolve data and return results
+    results = meitei.search("mi")
+    assert len(results) >= 1
+    assert results[0].canonical_lemma == "ꯃꯤ"
+
+    # Grammar retrieval should still resolve
+    topics = meitei.list_grammar_topics()
+    assert len(topics) >= 8
+
+    # Books catalog should still resolve
+    books = meitei.list_books()
+    assert len(books) >= 10
+
+    # Reviews should still resolve
+    reviews = meitei.load_reviews()
+    assert len(reviews) >= 6
+

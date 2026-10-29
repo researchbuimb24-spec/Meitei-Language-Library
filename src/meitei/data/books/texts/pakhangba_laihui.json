@@ -1,0 +1,154 @@
+{
+  "book_id": "pakhangba_laihui",
+  "title": "ꯄꯥꯈꯪꯕ ꯂꯥꯏꯍꯨꯏ",
+  "title_en": "Pakhangba Laihui: The Divine Chronicle of Sovereign Pakhangba",
+  "author": "Ancient Kangla Royal Maichous",
+  "language": "Meitei (Manipuri)",
+  "script": "Meitei Mayek",
+  "genre": "Royal Chronicle / Cosmic Puya / Sovereign Hymns",
+  "description": "The sacred ancient puya detailing the divine dragon-king Pakhangba, sovereign coronation rites, cosmic creation symbolism, and ancient coronation hymns of the Ningthouja dynasty at Kangla. It is the spiritual and genealogical foundation of Manipuri royalty.",
+  "source": "Royal Palace Archives of Kangla & Directorate of Language Planning",
+  "copyright": "Public Domain (Ancient Sacred Chronicle)",
+  "chapters": [
+    {
+      "chapter_id": "pakhangba_laihui-c01",
+      "book_id": "pakhangba_laihui",
+      "chapter_number": 1,
+      "title": "ꯄꯥꯈꯪꯕꯒꯤ ꯂꯥꯏꯒꯤ ꯑꯣꯏꯕ ꯍꯧꯔꯀꯐꯝ ꯑꯃꯁꯨꯡ ꯁꯛꯇꯝ",
+      "title_en": "The Cosmic Origin and Divine Incarnation of Pakhangba",
+      "passages": [
+        {
+          "passage_id": "pakhangba_laihui-c01-p001",
+          "book_id": "pakhangba_laihui",
+          "chapter_number": 1,
+          "passage_number": 1,
+          "text": "ꯏꯄꯨꯊꯧ ꯄꯥꯈꯪꯕ ꯑꯁꯤ ꯑꯇꯤꯌꯥ ꯒꯨꯔꯨ ꯁꯤꯗꯕꯒꯤ ꯊꯧꯖꯥꯜꯗꯒꯤ ꯃꯥꯂꯦꯝ ꯂꯩꯉꯥꯛꯅꯕ ꯂꯥꯛꯈꯤꯕ ꯂꯥꯏꯒꯤ ꯑꯣꯏꯕ ꯅꯤꯡꯊꯧꯅꯤ꯫",
+          "text_roman": null,
+          "text_bengali": null,
+          "translation_en": null,
+          "translation_provenance": null,
+          "word_count": 13,
+          "character_count": 83
+        },
+        {
+          "passage_id": "pakhangba_laihui-c01-p002",
+          "book_id": "pakhangba_laihui",
+          "chapter_number": 1,
+          "passage_number": 2,
+          "text": "ꯃꯍꯥꯛꯅ ꯅꯨꯃꯤꯠꯇ ꯃꯤꯑꯣꯏꯕꯒꯤ ꯁꯛꯇꯝ ꯑꯣꯏꯅ ꯑꯃꯁꯨꯡ ꯑꯍꯤꯡꯗ ꯂꯥꯏꯒꯤ ꯂꯤꯟ ꯑꯆꯧꯕ (ꯗ꯭ꯔꯦꯒꯟ) ꯑꯣꯏꯅ ꯂꯩꯄꯥꯛꯄꯨ ꯉꯥꯛ-ꯁꯦꯟꯈꯤ꯫",
+          "text_roman": null,
+          "text_bengali": null,
+          "translation_en": null,
+          "translation_provenance": null,
+          "word_count": 14,
+          "character_count": 91
+        },
+        {
+          "passage_id": "pakhangba_laihui-c01-p003",
+          "book_id": "pakhangba_laihui",
+          "chapter_number": 1,
+          "passage_number": 3,
+          "text": "ꯃꯍꯥꯛꯀꯤ ꯃꯉꯥꯜꯅ ꯀꯪꯂꯥ ꯄꯨꯝꯕꯕꯨ ꯁꯦꯡꯂꯕ ꯃꯐꯝ ꯑꯣꯏꯍꯟꯈꯤ꯫",
+          "text_roman": null,
+          "text_bengali": null,
+          "translation_en": null,
+          "translation_provenance": null,
+          "word_count": 7,
+          "character_count": 43
+        }
+      ],
+      "summary": null,
+      "translation_en": null,
+      "translation_provenance": null
+    },
+    {
+      "chapter_id": "pakhangba_laihui-c02",
+      "book_id": "pakhangba_laihui",
+      "chapter_number": 2,
+      "title": "ꯀꯪꯂꯥ ꯀꯣꯅꯨꯡꯗ ꯅꯤꯡꯊꯧ ꯐꯝꯕꯥꯜ ꯀꯥꯕ",
+      "title_en": "The Coronation at Sacred Kangla Fort",
+      "passages": [
+        {
+          "passage_id": "pakhangba_laihui-c02-p001",
+          "book_id": "pakhangba_laihui",
+          "chapter_number": 2,
+          "passage_number": 1,
+          "text": "ꯄꯥꯈꯪꯕꯅ ꯀꯪꯂꯥ ꯀꯣꯅꯨꯡꯒꯤ ꯃꯦꯟꯇꯣꯡꯗ ꯐꯝꯗꯨꯅ ꯅꯤꯡꯊꯧ ꯐꯝꯕꯥꯜ ꯀꯥꯈꯤ꯫",
+          "text_roman": null,
+          "text_bengali": null,
+          "translation_en": null,
+          "translation_provenance": null,
+          "word_count": 8,
+          "character_count": 51
+        },
+        {
+          "passage_id": "pakhangba_laihui-c02-p002",
+          "book_id": "pakhangba_laihui",
+          "chapter_number": 2,
+          "passage_number": 2,
+          "text": "ꯃꯥꯏꯕ-ꯃꯥꯏꯕꯤꯁꯤꯡꯅ ꯁꯦꯡꯂꯕ ꯏꯁꯤꯡ ꯇꯩꯗꯨꯅ ꯊꯧꯖꯥꯜ ꯄꯤꯈꯤ ꯑꯃꯁꯨꯡ ꯁꯂꯥꯏ ꯇꯔꯦꯠꯀꯤ ꯃꯤꯌꯥꯝꯅ ꯄꯨꯟꯅ ꯅꯤꯡꯊꯧꯕꯨ ꯈꯨꯔꯨꯝꯈꯤ꯫",
+          "text_roman": null,
+          "text_bengali": null,
+          "translation_en": null,
+          "translation_provenance": null,
+          "word_count": 13,
+          "character_count": 89
+        },
+        {
+          "passage_id": "pakhangba_laihui-c02-p003",
+          "book_id": "pakhangba_laihui",
+          "chapter_number": 2,
+          "passage_number": 3,
+          "text": "ꯃꯁꯤꯗꯒꯤ ꯍꯧꯅ ꯃꯅꯤꯄꯨꯔꯒꯤ ꯅꯤꯡꯊꯧ ꯂꯩꯉꯥꯛ ꯑꯃꯁꯨꯡ ꯂꯩꯄꯥꯛ ꯉꯥꯛꯄꯒꯤ ꯆꯠꯅꯕꯤ ꯃꯄꯨꯡ ꯐꯥꯅ ꯂꯦꯞꯈꯤ꯫",
+          "text_roman": null,
+          "text_bengali": null,
+          "translation_en": null,
+          "translation_provenance": null,
+          "word_count": 12,
+          "character_count": 72
+        }
+      ],
+      "summary": null,
+      "translation_en": null,
+      "translation_provenance": null
+    },
+    {
+      "chapter_id": "pakhangba_laihui-c03",
+      "book_id": "pakhangba_laihui",
+      "chapter_number": 3,
+      "title": "ꯄꯥꯈꯪꯕꯒꯤ ꯄꯥꯄꯍꯜ ꯑꯃꯁꯨꯡ ꯂꯩꯄꯥꯛ ꯉꯥꯛꯄꯒꯤ ꯊꯧꯖꯥꯜ",
+      "title_en": "The Sacred Dragon Symbolism and Protective Blessings for Kangleipak",
+      "passages": [
+        {
+          "passage_id": "pakhangba_laihui-c03-p001",
+          "book_id": "pakhangba_laihui",
+          "chapter_number": 3,
+          "passage_number": 1,
+          "text": "ꯄꯥꯈꯪꯕꯒꯤ ꯄꯥꯄꯍꯜ (ꯑꯀꯣꯏꯕ ꯂꯤꯟ ꯁꯛꯇꯝ) ꯑꯁꯤ ꯀꯪꯂꯩꯄꯥꯛꯀꯤ ꯅꯤꯡꯊꯧ ꯀꯣꯅꯨꯡ ꯑꯃꯁꯨꯡ ꯂꯩꯄꯥꯛꯀꯤ ꯈ꯭ꯋꯥꯏꯗꯒꯤ ꯁꯦꯡꯂꯕ ꯃꯁꯛ ꯑꯣꯏꯔꯤ꯫",
+          "text_roman": null,
+          "text_bengali": null,
+          "translation_en": null,
+          "translation_provenance": null,
+          "word_count": 15,
+          "character_count": 96
+        },
+        {
+          "passage_id": "pakhangba_laihui-c03-p002",
+          "book_id": "pakhangba_laihui",
+          "chapter_number": 3,
+          "passage_number": 2,
+          "text": "ꯃꯁꯤꯅ ꯇꯥꯛꯄꯗꯤ ꯃꯇꯝ ꯑꯃꯁꯨꯡ ꯑꯇꯤꯌꯥꯒꯤ ꯑꯔꯣꯏꯕ ꯂꯩꯇꯦ, ꯑꯃꯁꯨꯡ ꯀꯪꯂꯩꯄꯥꯛꯄꯨ ꯏꯄꯨꯊꯧ ꯄꯥꯈꯪꯕꯒꯤ ꯊꯧꯖꯥꯜꯅ ꯃꯇꯝ ꯆꯨꯞꯄꯗ ꯉꯥꯛ-ꯁꯦꯟꯗꯨꯅ ꯊꯝꯒꯅꯤ꯫",
+          "text_roman": null,
+          "text_bengali": null,
+          "translation_en": null,
+          "translation_provenance": null,
+          "word_count": 16,
+          "character_count": 106
+        }
+      ],
+      "summary": null,
+      "translation_en": null,
+      "translation_provenance": null
+    }
+  ]
+}

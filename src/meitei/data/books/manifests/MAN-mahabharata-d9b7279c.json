@@ -1,0 +1,13 @@
+{
+  "manifest_id": "MAN-mahabharata-d9b7279c",
+  "book_id": "mahabharata",
+  "source_file_path": "src\\meitei_lang\\data\\books.json",
+  "file_format": "json",
+  "sha256_checksum": "d9b7279c5736d31bbb880fb676a68f3929d6d31b8e5352068b571352baf23843",
+  "imported_at": "2026-10-29T02:15:47.662760+00:00",
+  "total_chapters": 4,
+  "total_passages": 19,
+  "total_word_count": 217,
+  "importer": "meitei-books-importer",
+  "notes": "Successfully segmented into 4 chapters and 19 passages."
+}
