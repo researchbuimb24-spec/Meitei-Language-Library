@@ -37,17 +37,14 @@ from meitei.loader import (
     get_default_data_dir,
     read_jsonl_lines,
 )
-from meitei.review import ReviewLedger, validate_review_record
 from meitei.schema import (
     ALL_ALLOWED_STATUSES,
     CANDIDATE_ALLOWED_STATUSES,
     CORE_ALLOWED_STATUSES,
     RecordStatus,
-    ReviewDecision,
     is_valid_gls_id,
     is_valid_grm_id,
     is_valid_lex_id,
-    is_valid_rev_id,
     is_valid_sns_id,
     is_valid_src_id,
     is_valid_var_id,
@@ -323,38 +320,6 @@ class ProvenanceAuditor:
         except Exception as e:
             warnings.append(f"Book library validation skipped or partial: {e}")
 
-        # ---------------------------------------------------------------------
-        # 8. Community Review Ledger Audit (reviews.jsonl)
-        # ---------------------------------------------------------------------
-        ledger = ReviewLedger(data_dir=self.data_dir)
-        reviews = []
-        awaiting_review_count = 0
-
-        try:
-            reviews = ledger.load_reviews()
-            for r in reviews:
-                if not is_valid_rev_id(r.id):
-                    errors.append(f"Review ID format invalid: '{r.id}'. Must match MEI-REV-xxxxxxx.")
-
-                if r.decision == ReviewDecision.AWAITING_REVIEW.value:
-                    awaiting_review_count += 1
-                    if fail_unreviewed:
-                        errors.append(f"Review '{r.id}' on '{r.target_id}' is still AWAITING_REVIEW.")
-
-                if r.decision == ReviewDecision.CORRECTED.value and not r.corrected_value:
-                    errors.append(f"Review '{r.id}' has decision CORRECTED but lacks corrected_value.")
-
-                if r.source_id and r.source_id not in known_sources:
-                    errors.append(f"Review '{r.id}' references unknown source_id '{r.source_id}'.")
-
-                if not r.consent_confirmed:
-                    errors.append(f"Review '{r.id}' lacks confirmed consent (consent_confirmed: false).")
-
-                if not r.cultural_sensitivity_checked:
-                    errors.append(f"Review '{r.id}' lacks confirmed cultural sensitivity check.")
-        except Exception as e:
-            errors.append(f"Review Ledger validation error: {e}")
-
         # Final validity determination
         is_valid = len(errors) == 0
 
@@ -367,8 +332,6 @@ class ProvenanceAuditor:
             "grammar_records": len(grammar_records),
             "books": books_count,
             "book_passages": passages_count,
-            "reviews": len(reviews),
-            "awaiting_review": awaiting_review_count,
             "unverified_candidates": unverified_count,
             "citation_mismatches": citation_mismatch_count,
         }
@@ -385,8 +348,8 @@ class ProvenanceAuditor:
             grammar_records_count=len(grammar_records),
             books_count=books_count,
             book_passages_count=passages_count,
-            reviews_count=len(reviews),
-            awaiting_review_count=awaiting_review_count,
+            reviews_count=0,
+            awaiting_review_count=0,
             citation_mismatch_count=citation_mismatch_count,
             unverified_candidates_count=unverified_count,
             errors=errors,

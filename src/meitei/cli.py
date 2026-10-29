@@ -63,13 +63,6 @@ from meitei.languages import (
     is_supported_language,
 )
 from meitei.loader import DataLoader, ValidationError
-from meitei.review import (
-    ReviewLedger,
-    ReviewRecord,
-    get_review_statistics,
-    get_reviews_for_target,
-    load_reviews,
-)
 from meitei.models import BibliographicSource
 from meitei.schema import CORE_ALLOWED_STATUSES, RecordStatus
 from meitei.search import check_fts5_available, search
@@ -242,44 +235,6 @@ def build_parser() -> argparse.ArgumentParser:
     p_b_stats.add_argument("--json", action="store_true", help="Output statistics as JSON.")
     p_b_stats.add_argument("--data-dir", default="data", help="Data directory (default: data).")
     p_b_stats.set_defaults(func=cmd_books_stats)
-
-    # -------------------------------------------------------------------------
-    # Subcommand: review
-    # -------------------------------------------------------------------------
-    p_review = subparsers.add_parser(
-        "review",
-        help="Community review ledger, verification decisions, and provenance audit.",
-    )
-    rev_sub = p_review.add_subparsers(dest="review_subcommand", help="Review actions.")
-
-    # review list
-    p_r_list = rev_sub.add_parser("list", help="List community review records.")
-    p_r_list.add_argument("--decision", choices=["accepted", "corrected", "rejected", "awaiting_review"], default=None, help="Filter by review decision.")
-    p_r_list.add_argument("--target-id", default=None, help="Filter by target record ID.")
-    p_r_list.add_argument("--json", action="store_true", help="Output reviews as JSON.")
-    p_r_list.add_argument("--data-dir", default="data", help="Data directory (default: data).")
-    p_r_list.set_defaults(func=cmd_review_list)
-
-    # review info
-    p_r_info = rev_sub.add_parser("info", help="Display details of a specific review record.")
-    p_r_info.add_argument("review_id", help="Review identifier (e.g. MEI-REV-0000001).")
-    p_r_info.add_argument("--json", action="store_true", help="Output review details as JSON.")
-    p_r_info.add_argument("--data-dir", default="data", help="Data directory (default: data).")
-    p_r_info.set_defaults(func=cmd_review_info)
-
-    # review stats
-    p_r_stats = rev_sub.add_parser("stats", help="Display review decisions statistics.")
-    p_r_stats.add_argument("--json", action="store_true", help="Output statistics as JSON.")
-    p_r_stats.add_argument("--data-dir", default="data", help="Data directory (default: data).")
-    p_r_stats.set_defaults(func=cmd_review_stats)
-
-    # review audit
-    p_r_audit = rev_sub.add_parser("audit", help="Audit community review ledger and provenance integrity.")
-    p_r_audit.add_argument("--strict", action="store_true", help="Enforce strict citation and review rules.")
-    p_r_audit.add_argument("--fail-unreviewed", action="store_true", help="Fail with non-zero exit code if unreviewed records exist.")
-    p_r_audit.add_argument("--json", action="store_true", help="Output audit report as JSON.")
-    p_r_audit.add_argument("--data-dir", default="data", help="Data directory (default: data).")
-    p_r_audit.set_defaults(func=cmd_review_audit)
 
     # -------------------------------------------------------------------------
     # Subcommand: validate / validate-data
@@ -973,8 +928,6 @@ def cmd_validate(args: argparse.Namespace) -> int:
     print(f"Candidate Lexicon Entries:   {report.candidate_entries_count:,}")
     print(f"Spelling Variants:           {report.variants_count:,}")
     print(f"Translation Glosses:         {report.glosses_count:,}")
-    if report.reviews_count > 0:
-        print(f"Review Records Audited:      {report.reviews_count:,} ({report.awaiting_review_count} awaiting review)")
     if report.books_count > 0:
         print(f"Digital Heritage Books:      {report.books_count:,} ({report.book_passages_count:,} passages)")
 
@@ -993,151 +946,6 @@ def cmd_validate(args: argparse.Namespace) -> int:
         return 1
 
     print("Integrity Guarantee:         100% Valid (Zero Referential Errors)")
-    print("================================================================")
-    return 0
-
-
-# =============================================================================
-# Community Review & Provenance Audit Commands
-# =============================================================================
-
-def cmd_review_list(args: argparse.Namespace) -> int:
-    """List review records with optional decision and target filters."""
-    ledger = ReviewLedger(data_dir=args.data_dir)
-    reviews = ledger.load_reviews()
-
-    if args.decision:
-        target_dec = args.decision.upper()
-        reviews = [r for r in reviews if str(r.decision).upper() == target_dec]
-
-    if args.target_id:
-        reviews = [r for r in reviews if r.target_id == args.target_id]
-
-    if args.json:
-        print(json.dumps([r.to_dict() for r in reviews], indent=2, ensure_ascii=False))
-        return 0
-
-    if not reviews:
-        print("No community review records found matching criteria.")
-        return 0
-
-    print("================================================================")
-    print("      Meitei Language Library - Community Review Ledger         ")
-    print("================================================================")
-    for r in reviews:
-        print(f"• [{r.id}] Target: {r.target_id} ({r.target_type})")
-        print(f"    Decision: {r.decision} | Role: {r.reviewer_role} | Reviewer: {r.reviewer_id} ({r.review_date})")
-        if r.source_locator:
-            print(f"    Citation: {r.source_id or 'N/A'} - {r.source_locator}")
-        if r.rationale:
-            print(f"    Rationale: {r.rationale}")
-        print()
-    print("================================================================")
-    return 0
-
-
-def cmd_review_info(args: argparse.Namespace) -> int:
-    """Display detailed metadata for a single review record."""
-    ledger = ReviewLedger(data_dir=args.data_dir)
-    r = ledger.get_review_by_id(args.review_id)
-    if not r:
-        print(f"Review record '{args.review_id}' not found.", file=sys.stderr)
-        return 1
-
-    if args.json:
-        print(json.dumps(r.to_dict(), indent=2, ensure_ascii=False))
-        return 0
-
-    print("================================================================")
-    print(f"Review Details: {r.id}")
-    print("================================================================")
-    print(f"Target ID:            {r.target_id}")
-    print(f"Target Type:          {r.target_type}")
-    print(f"Decision:             {r.decision}")
-    print(f"Reviewer Role:        {r.reviewer_role}")
-    print(f"Reviewer ID:          {r.reviewer_id}")
-    print(f"Review Date:          {r.review_date}")
-    print(f"Source ID:            {r.source_id or 'None'}")
-    print(f"Source Locator:       {r.source_locator or 'None'}")
-    print(f"Cultural Sensitivity: {'Verified' if r.cultural_sensitivity_checked else 'Unchecked'}")
-    print(f"Ethical Consent:      {'Confirmed' if r.consent_confirmed else 'Unconfirmed'}")
-    print(f"License:              {r.license}")
-    if r.previous_value:
-        print(f"Previous Value:       {r.previous_value}")
-    if r.corrected_value:
-        print(f"Corrected Value:      {r.corrected_value}")
-    if r.rationale:
-        print(f"Rationale:            {r.rationale}")
-    if r.revision_history:
-        print("Revision History:")
-        for rev in r.revision_history:
-            print(f"  - [{rev.get('date')}] {rev.get('reviewer_id')}: {rev.get('comment')}")
-    print("================================================================")
-    return 0
-
-
-def cmd_review_stats(args: argparse.Namespace) -> int:
-    """Display review decisions statistics."""
-    ledger = ReviewLedger(data_dir=args.data_dir)
-    stats = ledger.get_statistics()
-
-    if args.json:
-        print(json.dumps(stats, indent=2, ensure_ascii=False))
-        return 0
-
-    print("================================================================")
-    print("      Meitei Community Review Ledger Statistics                 ")
-    print("================================================================")
-    print(f"Total Reviews:            {stats['total_reviews']}")
-    print(f"Awaiting Review:          {stats['awaiting_review_count']}")
-    print("Decisions Breakdown:")
-    for dec, cnt in stats["decisions"].items():
-        print(f"  - {dec:16s}: {cnt}")
-    print("Reviewer Roles Breakdown:")
-    for role, cnt in stats["roles"].items():
-        print(f"  - {role:20s}: {cnt}")
-    print("Target Typology Breakdown:")
-    for tt, cnt in stats["target_types"].items():
-        print(f"  - {tt:20s}: {cnt}")
-    print("================================================================")
-    return 0
-
-
-def cmd_review_audit(args: argparse.Namespace) -> int:
-    """Audit review ledger and provenance records."""
-    auditor = ProvenanceAuditor(data_dir=args.data_dir)
-    report = auditor.audit(strict=args.strict, fail_unreviewed=args.fail_unreviewed)
-
-    if args.json:
-        print(json.dumps(report.to_dict(), indent=2, ensure_ascii=False))
-        return 0 if report.is_valid else 1
-
-    print("================================================================")
-    status_str = "PASSED" if report.is_valid else "FAILED"
-    print(f"      Meitei Review & Provenance Audit: {status_str}            ")
-    print("================================================================")
-    print(f"Strict Mode:              {'Enabled' if args.strict else 'Disabled'}")
-    print(f"Total Reviews Audited:    {report.reviews_count}")
-    print(f"Awaiting Review:          {report.awaiting_review_count}")
-    print(f"Unverified Candidates:    {report.unverified_candidates_count}")
-    print(f"Citation Mismatches:      {report.citation_mismatch_count}")
-    print(f"Core Lexicon Entries:     {report.core_entries_count}")
-    print(f"Sources Validated:        {report.sources_count}")
-
-    if report.warnings:
-        print("----------------------------------------------------------------")
-        print("Warnings:")
-        for w in report.warnings:
-            print(f"  [WARN] {w}")
-
-    if report.errors:
-        print("----------------------------------------------------------------")
-        print("Audit Errors:", file=sys.stderr)
-        for err in report.errors:
-            print(f"  [ERROR] {err}", file=sys.stderr)
-        print("================================================================", file=sys.stderr)
-        return 1
-
     print("================================================================")
     return 0
 

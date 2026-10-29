@@ -87,7 +87,6 @@ def test_meitei_package_metadata_and_exports():
     assert hasattr(meitei, "list_grammar_topics")
     assert hasattr(meitei, "list_books")
     assert hasattr(meitei, "read_passages")
-    assert hasattr(meitei, "load_reviews")
     assert hasattr(meitei, "audit_repository")
     assert hasattr(meitei, "normalize_text")
     assert hasattr(meitei, "detect_script")
@@ -113,8 +112,4 @@ def test_meitei_offline_independent_path_resolution(tmp_path, monkeypatch):
     # Books catalog should still resolve
     books = meitei.list_books()
     assert len(books) >= 10
-
-    # Reviews should still resolve
-    reviews = meitei.load_reviews()
-    assert len(reviews) >= 6
 
